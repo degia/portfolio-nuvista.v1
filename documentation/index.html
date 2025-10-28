@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="keywords" content="">
+
+	<title>Roxine HTML Template - Documentation</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stroke.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shCore.css" media="all">
+	<link rel="stylesheet" type="text/css" href="syntax-highlighter/styles/shThemeDefault.css" media="all">
+
+	<!-- COLORS -->
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		
+</head>
+<body>
+
+	<div id="wrapper">
+
+
+		<section id="top" class="section white">
+
+			<!-- Fixed navbar -->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#top"><img src="upload/logo.svg" alt="Roxine"></a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+						<li><a href="#line1">Folder Structure</a></li>
+						<li><a href="#line2">Installation</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Theme Customization <span class="fa fa-angle-down"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#line2">Upgrade</a></li>
+                                <li><a href="#line6">Typography Options</a></li>
+                                <li><a href="#line6">Color Schemes</a></li>
+                                <li><a href="#line7_1">HTML Structure</a></li>
+                                <li><a href="#line7_2">CSS Structure</a></li>
+                                <li><a href="#line7_3">Javascript Structure</a></li>
+                                <li><a href="#line7_4">Retina Ready Images</a></li>
+                                <li><a href="#line7_6">Fontawesome Fonts</a></li>
+                                <li><a href="#line7_7">Custom/Icomoon Fonts</a></li>
+                                <li><a href="#line7_9">Animations</a></li>
+                                <li><a href="#line7_10">Parallax Settings</a></li>
+                                <li><a href="#line7_11">Mailchimp Intigration</a></li>
+                                <li><a href="#line7_12">Ajax Contact Form</a></li>
+                                <li><a href="#line7_12_2">Elements</a></li>
+                                <li><a href="#line7_14">Revolution Slider</a></li>
+                                <li><a href="#line7_15">Site Upload</a></li>
+							</ul>
+						</li>
+						<li><a href="#line8">Helper Classes</a></li>
+						<li><a href="#line9">Sources</a></li>
+						<li><a href="#line10">Credits</a></li>
+						<li><a href="#line11">Changelog</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="btn btn-info"><a target="_blank" href="http://themeforest.net/user/waituk/portfolio">Other Items</a></li>
+					</ul>
+		        </div><!--/.nav-collapse -->
+				</div>
+			</nav>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="big-title text-center">
+							<h1>Roxine - Multi-Purpose Creative Agency Template</h1> 
+							<p class="lead">Roxine / template documentation version 1.0.0</p>
+						</div><!-- end title -->
+					</div><!-- end 12 -->
+				</div><!-- end row -->
+
+				<hr>
+
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Table of Content<hr></h2>
+		                <div class="row">
+			                <div class="col-md-3">
+			                    <ol class="intro">
+			                        <li><a href="#line1">Folder Structure</a></li>
+			                        <li><a href="#line2">Configure Using Grunt/Sass</a></li>
+			                        <li><a href="#line7">Template Customization</a>
+			                            <ul>
+			                            	<li><a href="#line5">Upgrade to New Version</a></li>
+			                                <li><a href="#line6">Typography Options</a></li>
+			                                <li><a href="#line6">Color Schemes</a></li>
+			                                <li><a href="#line7_1">HTML Structure</a></li>
+			                                <li><a href="#line7_2">CSS Structure</a></li>
+			                                <li><a href="#line7_3">Javascript Structure</a></li>
+			                                <li><a href="#line7_4">Retina Ready Images</a></li>
+			                                <li><a href="#line7_6">Fontawesome Fonts</a></li>
+			                                <li><a href="#line7_7">Custom/Icomoon Fonts</a></li>
+			                                <li><a href="#line7_8">Vector Fonts</a></li>
+			                                <li><a href="#line7_9">Animations</a></li>
+			                                <li><a href="#line7_10">Parallax Settings</a></li>
+			                                <li><a href="#line7_11">Mailchimp Intigration</a></li>
+			                                <li><a href="#line7_12">Ajax Contact Form</a></li>
+			                                 <li><a href="#line7_12">Elements</a></li>
+			                                <li><a href="#line7_13">Site Search</a></li>
+			                                <li><a href="#line7_14">Revolution Slider</a></li>
+			                                <li><a href="#line7_15">Site Upload</a></li>
+			                            </ul>
+									</li>
+									<li><a href="#line8">Helper Classes</a></li>
+			                        <li><a href="#line9">Support Desk</a></li>
+			                        <li><a href="#line10">Files & Sources</a></li>
+			                        <li><a href="#line11">Version History (Changelog)</a></li>
+			                    </ol>
+			                </div>
+
+			                <div class="col-md-5 drop-caps full">
+			                	<div class="intro1">
+			                    <ul>
+			                        <li><strong>Item Name : </strong> Roxine</li>
+			                        <li><strong>Item Version : </strong> Version 1.0.0</li>
+			                        <li><strong>Minumum Required : </strong> Twitter Bootstrap: 4.0.0</li>
+			                        <li><strong>Author by : </strong> <a href="http://themeforest.net/user/waituk">waituk</a></li>
+			                        <li><strong>Support via Email : </strong> <a href="mailto:support@waituk.net">support@waituk.net</a></li>
+			                    </ul>
+			                    </div>
+
+			                	<hr>
+			                	<div class="drop-caps">
+			                    <p>Roxine is a high performance, robust and scalable template based on latest Bootstrap 4 framework focused on transforming your online presence into dynamic frontend digital solution that you can use for any project type.</p>
+
+			                    <p>With HTML5 and CSS3 semantic codes, Retina Optimized, 100% Responsive layout, Sass files and Revolution Slider included, built on latest Bootstrap 4 framework and Unlimited Color, Typography and Icons customisation - you are all set to create a web presence to be proud of.</p>
+
+				        		<p>Thank you for purchasing Roxine HTML Template and if you like this template, please do not forget to rate it. It really helps us a great deal in improving our item and motivates us to add more layouts and features on an ongoing basis. <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+
+			                    </div>
+			                </div>
+
+			                <div class="col-md-4">
+				                <img width="100%" src="upload/demo-01.jpg" alt="" class="img-responsive img-thumbnail">
+			                </div>
+
+		                </div><!-- end row -->
+		            </div>		
+		        </div>	
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line1" class="section grey">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Folder Structure <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<p>Once you purchase and download the theme - unzip the folder and you will find a folder called Roxine. Inside this folder, there are 3 folders named "Roxine", "documentation" and "PSD". The main html working folder is "Roxine". An overview of the folder structure is given below.</p>
+
+		        		<h4>Folder Structure</h4>
+
+				        <pre class="brush: html">
+## Template Folder stucture: ##
+
+
+	Roxine 
+        /build 										
+            -/scss
+                -/base
+                    _base.scss
+                    _colors.scss
+                    _typography.scss
+                -/components
+                -/fonts
+                	-/bootstrap
+                	-/icomoon
+                -/layout
+                    _header.scss
+                    _footer.scss
+                -/modifiers
+                    _custom-variables.scss
+                    _mixins.scss
+                    _rem.scss 
+                -/skins
+                	_construction.scss
+                	_default.scss
+                -/vendors
+                    -/bootstrap
+                    -/bootstrap-select
+                    -/bootstrap-slider-master
+                    -/mega-menu
+                 -/widgets
+                 	_instagram.scss
+                 	_recent-posts.scss
+                 	_twitter.scss
+                _bootstrap-custom.scss
+                bootstrap.scss
+                construction.scss
+                main.scss
+
+        /css									
+        	-/fonts
+        		-/bootstrap
+        		-/icomoon
+        		-/roxine-font-icon
+        	-/skins
+        		primary.css
+        		primary-dark.css
+        		secondary.css
+        		color-1.css
+    		-/vendor-overwrites
+    			-/noneed.css
+    			-roxine-font-icon.css
+    		-/vendor
+    			-/bootstrap-select
+    		bootstrap.css
+    		main.css
+    		construction.css
+        /fonts
+    		-/bootstrap
+    		-/icomoon
+    		-/roxine-font-icon 
+        /img  
+        -/js
+        	-contact-form.js
+        	-jquery.main.js
+        	jquery.validate.js
+        	mailchimp.js
+        	mega-menu.js
+        	revolution.js
+        -/php
+            send_email.php
+            subscribe.php
+        -/sourceimages
+        -/vendors
+            -/animate
+            -/bootstrap
+            -/fancybox
+            -/flag
+            -/font-awesome
+            -/jquery-ui
+            -/revolution
+            -/stellar
+		-/videos
+        grunt-settings.js
+        Gruntfile.js
+        package.json
+        index.html
+        about.html etc.
+
+				        </pre>
+				        
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line2" class="section white">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Customize Using Sass or Vanilla CSS<a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="intro2 clearfix">
+							<p><i class="fa fa-css3"></i> Sass files along with grunt settings are included with this theme to make CSS customization super easy and interactive.<br>
+							Please read more about Sass here. <a href="http://sass-lang.com/install" target="blank">Sass Installation</a> </p>
+						</div>
+
+						<hr>
+
+						<h4>Customize CSS with Sass</h4>
+
+						<p>Using sass gives you ultimate control over editing the site template. You can switch color schemes, typography etc. site wide in seconds, often editing one line of code. To use this method, you should have node and grunt installed in your system and put your html folder "Roxine" in mamp or xampp folder and ensure that mamp/xampp is running.</p>
+						
+						<li><strong>Node: </strong> https://docs.npmjs.com/getting-started/installing-node</li>
+						<li><strong>Grunt: </strong> http://gruntjs.com/getting-started</li>
+						<li><strong>Sass: </strong> http://sass-lang.com</li>
+						<li><strong>MAMP: </strong> https://www.mamp.info/en/</li>
+						<li><strong>XAMPP: </strong> https://www.apachefriends.org</li>
+
+						<br>
+					</div><!-- end col -->
+
+					<div class="col-md-6">
+<!-- 						<div class="media">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
+						</div> -->
+						<p>After ensuring that you have node and grunt, all you need to do is open your terminal/cmd and then cd into your directory where you have the site template files (inside mamp or xampp). After that you need to run “npm install” - without quotes. Once this is complete, you will have a new folder in your theme folder called “node_modules”. After that just type “grunt” without quotes in your terminal/cmd and you will notice the site running in your browser. Any changes you make to sass files will be compiled automatically to css and changes will be reflected live in your browser without even refreshing it - thanks to browser sync.</p>
+
+						<h4>Customize CSS Directly</h4>
+						<p>If you would like to edit the CSS directly, you will find all CSS in one single file css >> main.css</p>
+						<li><strong>Step 1</strong> - Go to css >> main.css </li>
+						<li><strong>Step 2</strong> - The file is properly labelled with main css blocks. To go to individual section, just search for it alongwith the number, eg. "2. Header" will take you to section with header rules. Copy the element you would like to customize and place it in your custom.css</li>
+						<li><strong>Step 3</strong> - Save your changes inside custom.css or add new rules here.</li>
+
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line2" class="section grey">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Upgrading to New Release<a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="intro2 clearfix">
+							<p><i class="fa fa-warning"></i> If its the first time you have purchased and downloded this item, please ignore this section. BUT If you have previously downloaded the template and have made customization, you should have all your scss and/or css customizations in a separate file you have created. If not - please strictly follow the instructions below:</p>
+						</div>
+						<br>
+						<li><strong>BACKUP</strong><br> Please backup your files before making any changes - so that you have somewhere to look and compare if something goes wrong.
+						<li><strong>CSS</strong> <br>Please add a blank file called custom.css to css folder. And then place all your customized code inside this file. After that, link this file in your htmls. Please remember to place this link after all other css links in header. Similarly, if you are working with scss</li> 
+						<li><strong>JS</strong> <br> Same way as with CSS - you should place all your js code in custom.js file and call this file after jquery.main.js</li>
+<!-- link to material icon font -->
+<link media="all" rel="stylesheet" href="vendors/material-design-icons/material-icons.css">
+							</pre>
+						<li><strong>HTML: </strong> <br>Here, you should not overwrite your existing file - pleae copy the code block you want and replace it in your file.</li>
+
+
+						<br>
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line6" class="section white">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">How to Change Theme Color and Typography <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<p>This is modern template built on modern technologies to make editing the template a breeze. Thre are however few things that need to be ensured for working properly with the theme in advanced mode. 1. Please put the html folder "html" inside your mamp/xampp folder and rename it to your site. 2. Ensure that your local server is running and go to your browser and then run th site from local server.</p>
+					</div>
+
+					<div class="col-md-6">
+						<a href="upload/typography.png" data-rel="prettyPhoto"><img src="upload/typography.png" alt="" class="img-responsive img-thumbnail"></a>
+						<h4>Typography Customization</h4>
+						<p>Typography is defined inside build >> scss >> base >> _typography.scss <br>
+						To add a new typography font from Google Fonts, please visit https://www.google.com/fonts
+						On top left corner, search for specific font you want to use and click on “Add to Collection” and the “Use”
+						On the next page - you can 1. select font styles 2. leave character set to default 3. Click on @import tab and then copy there code. This code would look similar to:<br>
+						<pre class="brush: html">
+						@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+						</pre>
+						<br>
+
+						Now head over to build >> scss >> base >> _typography.scss and paste your code just under the comment  // import link for google font<br>
+
+						Again head back to google font page where you copied your code from and you will see 4. Integrate the font in your css - copy the code from this section which would look similar to <br>
+						<pre class="brush: html">
+						font-family: 'Montserrat', sans-serif;
+						</pre>
+						<br>
+						
+						and paste this under the comment // create font variable Now just rename the part “font-family” to $font-name e.g.. $montserrat <br>
+
+						Finally, under h1 , h2 , h3 etc. around line 39, change font-family: to $font-name you just created above.<br>
+
+						This will change all your heading fonts. The paragraph font is global and you can set it next to $font-family-base: around line 16. You can also change the font individually to something else, just follow the following code example<br>
+						<pre class="brush: html">
+						p {
+							font-family: $font-name;
+						}
+						</pre>
+						<br>
+
+						You can do the same for any individual element like button etc.</p>
+					</div><!-- end col -->
+
+					<div class="col-md-6">
+						<a href="upload/color-skins.png" data-rel="prettyPhoto"><img src="upload/color-skins.png" alt="" class="img-responsive img-thumbnail"></a>
+						<h4>Theme Color Customization</h4>
+						<p>To change color directly via CSS, please go to css >> skins where you will find primary.css and secondary.css etc. which is individual color files as well as color-1.css which is the red variation of the skin. And you can edit colors here easily and make sure you call this file after calling main.css in the head of html document. So, if you add, for example, <pre class="brush: html"><link media="all" rel="stylesheet" href="css/skins/color-1.css"></pre>  you will have color scheme of red. You can simply edit this color-1.css file or create new one just by changing the color code in this file.</p>
+						<p>Color variables are defined inside build >> scss >> base >> _colors.scss Use this file to add more colors as variables if you want to use color variables instead of hex color codes.<br><br>
+
+						Theme colours for all major blocks are defined inside build >> scss >> skins >> _default.scss
+						You will find a readymade color skin example here that to show that you can create any color variations simply vy copying this file and creating a new one, _construction.scss in this example provided where you can change the color variables and compile to instantly change any or all section of your colors incluing the black / grey variations other than primary and secondary colors. 
+						_default.scss is default skin and changing color here would change the pages using css/main.css
+						Similarly changing _construction.scss would modify color scheme in pages using construction.css<br><br>
+
+						To generate a new scheme - you can easily copy any of the schemes and edit color to your likings. Although we have created color variables in base/_colors and used these color variables in themes, you can easily use #colorcode instead of the variables. <br> </p>
+						<ul>
+							<li><strong>Step 1</strong> - Go to build >> scss >> base >> _colors.</li>
+							<li><strong>Step 2</strong> - Add a color variable here after comment //Add your own colors, eg $my-red-color: #c02127;</li>
+							<li><strong>Step 3</strong> - Go to build >> scss >> skins >> _default.scss and around line 14.</li>
+							<pre class="brush: html">
+								replace
+									$preloader-icon-border-color: $primary-color;
+								with
+									$preloader-icon-border-color: #c02127;
+							</pre>
+							<li><strong>Step 4</strong> - To make sitewide template customizations, edit the color variables shown below to your likings on this page with either by adding color variables as shown above or just by adding hex color code in this skin file.
+							<pre class="brush: html">
+							 // Main Color Scheme
+							$primary-color: 							   $dodger-blue;
+							$secondary-color: 							   $orange;
+							$light-grey:                                   $ghost;
+							$dark-grey:                                    $scorpion;
+							$light-black:                                  $abbey;
+							$dark-black:                                   $mine-shaft-d;
+							$off-white:                                    $off-white;
+							</pre>
+							</li>
+						</ul>
+					</div><!-- end col -->
+
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line7" class="section grey">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Template Customizations <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<h4 id="line7_1">HTML Structure - <a href="#top">#back to top</a></h4>
+						<pre class="brush: html">
+							<div class="row">
+								<div class="col-sm-6">
+								</div>
+								<div class="col-sm-6">
+								</div>
+							</div>
+						</pre>
+						<p>This template is based on Bootstrap 4 framework. <a class="link-color" href="https://v4-alpha.getbootstrap.com/getting-started/introduction/">Learn about Bootstrap 4 here.</a></p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+							<a href="upload/css-structure.png" data-rel="prettyPhoto"><img src="upload/css-structure.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_2">CSS Structure - <a href="#top">#back to top</a></h4>
+						<p>A properly organized sass structure divided into multiple folders for development while creating one single CSS file for production has been our top priority. Hence you will find every component in its own sass file for ease of customization. After making all the changes - just run "grunt dist" for css output. If you want to edit the css instead of sass, chose the theme that you want to work with, and you will find it labelled with each section. Now you can easily jump to specific section by searching for, lest say, "2. Header" in your code editor.</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+							<a href="upload/header-footer.png" data-rel="prettyPhoto"><img src="upload/header-footer.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_2">Header/Footer - <a href="#top">#back to top</a></h4>
+						<p>All header and footer variations are defined in build >> scss >> layout folder. From here, you can customize the header and footer section for any of the included variations. As shown in screenshot, you can edit main header, white header or header with centered logo etc. and similarly the _footer.scss will aloow editing of any footer variation included in the theme.</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+				
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/jquery-initializers.png" data-rel="prettyPhoto"><img src="upload/jquery-initializers.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_3">Javascript/jQuery - <a href="#top">#back to top</a></h4>
+						<p>All external javascript libraries are inside -/vendors folder while the settings are inside -/js folder. The jquery.main.js file located inside "js" folder has all the initializers and if you wanted to customize any js module, this is where you will find and customize them.</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+				
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/retina.jpg" data-rel="prettyPhoto"><img src="upload/retina.jpg" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_4">Retina Ready Images - <a href="#top">#back to top</a></h4>
+						<p>To display retina image on retina devices - all you have to do is include the following code in your footer:
+						<pre class="brush: html"><script src="vendors/retina/retina.min.js"></script></pre>
+						and add high resolution image that is two times in dimension with @2x. For example, if you have an image with 40x40 dimension named img1.jpg you will need to add same image with 80x80 dimension named img1@2x.jpg in exact same location where your original image is. For more information, please have a look at:<BR>
+						<a class="link-color" href="http://imulus.github.io/retinajs/">Learn about Retina JS</a></p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+				
+				<div class="row">
+
+					<div class="col-md-12">
+						<h4 id="line7_6">Font Awesome - <a href="#top">#back to top</a></h4>
+						<p>Head over to https://fortawesome.github.io/Font-Awesome/icons/ Now just copy the font you would like from this page, e.g. fa-search-plus and use it in code as shown below:
+						<pre class="brush: html"><i class="fa fa-search-plus"></i></pre></p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<h4 id="line7_7">Custom/Icomoon Fonts - <a href="#top">#back to top</a></h4>
+						<p>Custom font icons is generated with icomoon and the css is located at css/fonts/icomoon/icomoon.css And extra font icons can be found in css/font/roxine-font-icon folder. To simply use the fonts, head over to css/fonts/icomoon/icomoon.css Now just copy the font you would like from this page, e.g. amazon and use it in code as shown below:
+						<pre class="brush: html"><span class="icon icon-plus-circle"><span class="sr-only"></span></span></pre></p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/animation.png" data-rel="prettyPhoto"><img src="upload/animation.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_9">Animations - <a href="#top">#back to top</a></h4>
+						<p>For animations we have used <a class="link-color" href="https://daneden.github.io/animate.css/">Animate CSS</a> and <a class="link-color" href="https://github.com/matthieua/WOW">WOW JS</a><br>
+						First, head over to https://daneden.github.io/animate.css/ and chose the animation effect you like. And then use the class with wow to show the effect on scroll. We have also included a html file with animations to make it easy, just head over to element-animations.html and copy the code from the animation you like. For example, if you like animations on slideInRight, add the example class below to animate any element.
+						<pre class="brush: html">class="wow slideInRight"</pre>
+						</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/parallax.png" data-rel="prettyPhoto"><img src="upload/parallax.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_10">Parallax Settings - <a href="#top">#back to top</a></h4>
+						<p>All parallax settings are inside build >> scss >> components >> _parallax.scss  Similarly, all parallax background images are inside build >> scss >> components >> _parallax-images.scss<br>
+						You can add your own images for parallax BG, and you can customize things like opacity through the utility classes like "black-overlay-6" which will put 60% black color overlay opacity to the parallax image.</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/mailchimp.png" data-rel="prettyPhoto"><img src="upload/mailchimp.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_11">Mailchimp Intigration - <a href="#top">#back to top</a></h4>
+						<p>The template has a built in Mailchimp integration if you wish to use the “Newsletter Subscription”. The working example of this is provided in the contact.html page example. To include it, first you need to signup with mail chimp. Then you need to open php >> subscribe.php where you need to place your own $apiKey and $listId. Once thats done - you are all set to create your newsletter list on mail chimp and start getting subscribers emails. You can copy the subscribe form HTML form from contact.html to include in any other pages of your choice.<br>
+						To configure the validation and messages, please go to js >> mailchimp.js<br>
+						<a class="link-color" href="http://mailchimp.com">Learn more about Mailchimp</a><br>
+						<a class="link-color" href="http://kb.mailchimp.com/accounts/management/about-api-keys">Find your Mailchimp API Keys</a>
+						</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/ajax-contact-form.png" data-rel="prettyPhoto"><img src="upload/ajax-contact-form.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_12">Ajax Contact Form - <a href="#top">#back to top</a></h4>
+						<p>The template has a built in Ajax Contact Form and if you wish to use the “contact form”. The working example of this is provided in the contact.html page example. To set it to receive contact form messages in your own inbox, head over to php >> send_email.php and around line 4, replace 
+						<pre class="brush: html">
+							$to = ‘support@mail.com';
+
+							with 
+
+							$to = ‘your-own-email@your-own-domain.com’;
+						</pre>
+						You can copy the contact form HTML form from contact.html to include in any other pages of your choice.
+						</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/elements.png" data-rel="prettyPhoto"><img src="upload/elements.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_12_2">Elements / Components - <a href="#top">#back to top</a></h4>
+						<p>Inside build >> scss >> components folder, you will find multiple element block scss files which contain all the css rules for elements. We have used a class .demo-wrapper to contain elements in most cases as this is for demo purposes to show how this element can be integrated. So you can use .demo-wrapper class along with rest of html to place the code exactly as it is - or leave demo-wrapper class and style it with another class. 
+						</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+					<div class="col-md-4">
+						<a href="upload/plugin2.png" data-rel="prettyPhoto"><img src="upload/plugin2.png" alt="" class="img-responsive img-thumbnail"></a>
+					</div>
+
+					<div class="col-md-8">
+						<h4 id="line7_14">Revolution Slider Options - <a href="#top">#back to top</a></h4>
+						<p>We have included a premium revolution slider with our template. The revolution slider is one of the most popular jQuery slider plugins and you can find a lot of tutorials online for this plugin including videos. We have also included the documentation along with latest version of Revolution Slider which you will find in the main download folder.</p>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+				<div class="row">
+
+					<div class="col-md-12">
+						<h4 id="line7_15">Site Upload to Live Server - <a href="#top">#back to top</a></h4>
+						<p>After you have modified the template to suit your needs and you are ready to show your site to the world, you can just delete following folders/files and uplaod the rest to your server.</p>
+						<pre class="brush: html">
+						Files and Folders to be Deleted before going live.
+							-/build
+							-/sourceimages
+							grunt-settings.js
+					        Gruntfile.js
+					        package.json
+					        csscomb.json
+						</pre>
+					</div><!-- end col -->
+				</div><!-- end row -->
+
+				<hr>
+
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+
+		<section id="line8" class="section white">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Helper Classes <a href="#top">#back to top</a><hr></h2>
+		            </div>
+		            <!-- end col -->
+		            <div class="col-xs-12">
+		                <div class="table-responsive">
+		                    <table class="table table-bordered table-hover">
+		                        <h4 id="line7_15">Common class examples used in template. You will find all of these inside build >> scss >> components >> _utilities.scss file and edit it at your will. Some most common examples are provided below:</h4>
+		                        <thead>
+		                            <tr>
+		                                <th>Class</th>
+		                                <th>Usage</th>
+		                            </tr>
+		                        </thead>
+		                        <tbody>
+		                            <tr>
+		                                <td>.has-overlay</td>
+		                                <td>Adds color overlay of black with 80% opacity as default.</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.bg-stretch</td>
+		                                <td>Stretches the background to 100% width</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.lighten-overlay</td>
+		                                <td>Black overlay with 30% opacity.</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.lighten-m-overlay</td>
+		                                <td>Black overlay with 60% opacity.</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.black-overlay-1 to .black-overlay-9</td>
+		                                <td>Black overlay with 10% to 90% opacity</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.v-align-row</td>
+		                                <td>Vertical align center (to add this class on parent)</td>
+		                            </tr>
+		                            <tr>
+		                                <td>.bg-gray-light</td>
+		                                <td>Light gray background</td>
+		                            </tr>
+		                            <tr>
+			                            <td>.bg-white</td>
+			                            <td>White background</td>
+		                            </tr>
+		                            	<td>.bg-black</td>
+		                            	<td>Black Background</td>
+		                            </tr>
+		                            	<td>.bordered</td>
+		                            	<td>Default boreder style of 0.7143rem solid transparent;</td>
+		                            </tr>
+		                            	<td>.white-border</td>
+		                            	<td>White border color for above border.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bg-primary</td>
+		                            	<td>Background color set to primary color.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bg-secondary</td>
+		                            	<td>Background color set to secondary color.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bg-darker</td>
+		                            	<td>Background color ser to dark grey.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.gray-transparent</td>
+		                            	<td>Background color set to light grey.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.no-overlay</td>
+		                            	<td>Has no color overlay.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.text-white</td>
+		                            	<td>Text is set to pure white.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.text-black</td>
+		                            	<td>Text is set to pure black.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.text-primary</td>
+		                            	<td>Text color set to primary color.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.text-secondary</td>
+		                            	<td>Text color becomes secondary color</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bottom-space</td>
+		                            	<td>Adds bottom margin big.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bottom-s-space</td>
+		                            	<td>Adds small bottom margin.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.bottom-m-space</td>
+		                            	<td>Adds medium bottom margin.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.top-xl-space</td>
+		                            	<td>Adds extra large top margin.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.top-m1-space</td>
+		                            	<td>Adds a medium-100 top margin.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.top-l-space</td>
+		                            	<td>Add a large top margin.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.block-right</td>
+		                            	<td>Sets left margin to auto.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.has-radius</td>
+		                            	<td>Adds border radius of 1 rem.</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.has-radius-huge</td>
+		                            	<td>Adds border radius of 5.429rem;</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.has-shadow</td>
+		                            	<td>Add box shadow. Default 0 2px 1px 0 rgba($black, .3);</td>
+		                            </tr>
+		                            </tr>
+		                            	<td>.transparent</td>
+		                            	<td>Add full transparency - e.g. on transparent buttons.</td>
+		                            </tr>
+		                        </tbody>
+		                    </table>
+		                </div>
+		                <!--end of .table-responsive-->
+		            </div>
+		        </div>
+		    </div>
+		</section>
+
+		<section id="line9" class="section grey">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Support Desk <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+		        <div class="row">
+					<div class="col-md-6">
+						<p>Please remember you have purchased a very affordable template and you have not paid for a full-time web design agency. Occasionally we will help with small tweaks, but these requests will be put on a lower priority due to their nature. Please be patient, polite and respectful and we will do our best to help you asap.</p>
+		                
+		                <p>Please visit our <a href="http://themeforest.net/user/waituk"><strong>profile page</strong></a> or ask question <a href="mailto:support@waituk.net">@waituk</a></p>
+		            
+		                <strong>Support for my items includes:</strong>
+		                <ul>
+		                    <li>* Responding to questions or problems regarding the item and its features</li>
+		                    <li>* Fixing bugs and reported issues</li>
+		                    <li>* Providing updates to ensure compatibility with new software versions</li>
+		                </ul>
+		                <strong>Item support does not include:</strong>
+		                <ul>
+		                    <li>* Customization and installation services</li>
+		                    <li>* Support for third party software and plug-ins</li>
+		                </ul>  
+
+					</div>
+		            
+		        	<div class="col-md-6">
+		              	<strong>Before seeking support, please...</strong>
+							<ul>
+		                        <li>* Make sure your question is a valid Template Issue and not a customization request.</li>
+		                        <li>* Make sure you have read through the documentation and any related video guides before asking support on how to accomplish a task.</li>
+		                        <li>* Make sure to double check the template comments section on items page.</li>
+		                        <li>* If you have customized your template and now have an issue, back-track to make sure you didn't make a mistake. If you have made changes and can't find the issue, please provide us with your changelog.</li>
+		                        <li>* Almost 80% of the time we find that the solution to people's issues can be solved with a simple "Google Search". You might want to try that before seeking support. You might be able to fix the issue yourself much quicker than we can respond to your request.</li>
+		                        <li>* Make sure to state the name of the template you are having issues with when requesting support via ThemeForest.</li>
+		  					</ul>
+		            </div>
+		         </div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line10" class="section white">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Files & Sources <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+		        <div class="row">
+		        	<div class="col-md-6">
+		                <strong>Included Stylesheets</strong>
+		                
+		                <p>These are the primary CSS files used for general front-end styling. Use these to customize your theme even further. All included CSS codes under <strong>Roxine/css/</strong></p>
+		                
+		                <ul>
+		                    <li>1. vendors/font-awesome/css/font-awesome.css - FontAwesome Font Icons stylesheet</li>
+		                    <li>2. css/fonts/icomoon/icomoon.css - Custom icomoon fonts</li>
+		                    <li>3. vendors/animate/animate.css - CSS3 animations css file</li>
+		                    <li>4. css/bootstrap.css - Bootstrap stylesheet</li>
+		                    <li>5. css/main.css - Main stylesheet</li>
+		                    <li>6. css/skins/color-1.css - The Color Variation</li>
+		                </ul>
+		                
+		        	</div>
+
+		        	<div class="col-md-6">
+		                <strong>Included JavaScript</strong>
+		                
+		                <p>These are the various attribution inks to the Javascript files included or modified to work with in this theme. All included JavaScript codes under <strong>Roxine/js/</strong></p>
+		                
+		                <ul>
+							<li>1. jQuery Library		vendors/jquery/jquery-2.1.4.min.js"></li>
+							<li>2. Bootstrap JS			vendors/bootstrap/javascripts/bootstrap.min.js"></li>
+							<li>3. Bootstrap Datepicker	vendors/bootstrap-datetimepicker-master/dist/js/bootstrap-datepicker.js"></li>
+							<li>4. jQuery Mobile		vendors/jquery-mobile/jquery.placeholder.min.js"></li>
+							<li>5. WOW Animation		vendors/wow/wow.min.js"></li>
+							<li>6. Stellar Parallax		vendors/stellar/jquery.stellar.min.js"></li>
+							<li>7. Validate JS			vendors/validate/jquery.validate.js"></li>
+							<li>8. Waypoint				vendors/waypoint/waypoints.min.js"></li>
+							<li>9. CounterUp			vendors/counter-up/jquery.counterup.min.js"></li>
+							<li>10. Fancy Box			vendors/fancybox/jquery.fancybox.js"></li>
+							<li>11. Owl Carousel		vendors/owl-carousel/owl.carousel.min.js"></li>
+							<li>12. Revolution Slider	js/revolution.js"></li>
+							<li>13. Mail Chimp			js/mailchimp.js"></li>
+							<li>14. Template JS			js/jquery.main.js"></li>
+		                </ul>
+		        	</div>
+		        </div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+				<section id="line11" class="section grey">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Credits <a href="#top">#back to top</a><hr></h2>
+		                <p>All Images used in the theme demo are from either Dollar Photo Club, Unsplash or Pixabay. Unsplash and Pixabay Images used in this theme are in Public Domain which you can view at the link provided, and available for commercial use. However, Dollar Photo Club images must be purchased. The links are provided for all images.</p>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+		        <div class="row">
+		        	<div class="col-md-6">
+		                <strong>Images From Shutterstock</strong>		                
+		                <ul>
+		                    <li>https://www.shutterstock.com</li>
+		                </ul>
+		                <strong>HTML5 Video by NatureClip</strong>		                
+		                <ul>
+		                    <li>http://www.videvo.net/video/flying-between-the-clouds/2161</li>
+		                </ul>
+		                
+		        	</div>
+
+		        	<div class="col-md-6">
+		                <strong>Icons (Font & Vector)</strong>
+		                
+		                <p>Note: Icons used in the template are from the noun project, and fontastic. You can legally use any of the icon included with the theme and add your own icons from noun project for free (attribution required in some cases).</strong></p>            
+		                <ul>
+		                    <li>Font Awesome: http://fortawesome.github.io/Font-Awesome/</li>
+		                    <li>Ion Icons: http://ionicons.com</li>
+		                    <li>The Noun Project: https://thenounproject.com/</li>
+		                    <li>Octicons: https://github.com/primer/octicons</li>
+		                    <li>Mini Icons: http://www.webalys.com/minicons/icons-free-pack.php</li>
+		                    <li>Foundation Icons: http://zurb.com/playground/foundation-icon-fonts-3</li>
+		                    <li>Entypo Icons: http://www.entypo.com</li>
+		                </ul>
+		                <strong>Patterns</strong>
+		                <ul>
+		                    <li>Subtle Patterns: http://subtlepatterns.com/ </li>
+		                </ul>
+		        	</div>
+		        </div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+		<section id="line12" class="section white">
+			<div class="container">
+		        <div class="row">
+		            <div class="col-md-12 left-align">
+		                <h2 class="dark-text">Version History (Changelog) <a href="#top">#back to top</a><hr></h2>
+		            </div><!-- end col -->
+		        </div><!-- end row -->
+
+		        <div class="row">
+					<div class="col-md-12">
+				        <p>Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. No guarantees, but I'll do my best to assist. If you have a more general question relating to the templates on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+				        <p>If you like this template, please do not forget to rate it <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+
+				        <hr>
+
+				        <h4>Changelog</h4>
+
+						<pre class="brush: html">
+
+						-----------------------------------------------------------------------------------------
+						Version 1.0.0 - July 2017
+						-----------------------------------------------------------------------------------------
+
+						- Initial Release
+
+
+				        </pre>
+				        		        
+        			</div>
+		         </div><!-- end row -->
+			</div><!-- end container -->
+		</section><!-- end section -->
+
+	</div><!-- end wrapper -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/retina.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+
+	
+
+    <!-- CUSTOM PLUGINS -->
+	<script src="js/custom.js"></script>
+	<script src="js/main.js"></script>
+
+
+
+
+	<script src="syntax-highlighter/scripts/shCore.js"></script>
+	<script src="syntax-highlighter/scripts/shBrushXml.js"></script>
+	<script src="syntax-highlighter/scripts/shBrushCss.js"></script>
+	<script src="syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+</html>
