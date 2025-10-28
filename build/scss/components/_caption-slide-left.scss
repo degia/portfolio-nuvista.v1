@@ -1,0 +1,36 @@
+/******* caption slide left styles *******/
+
+// caption slide left styles
+.caption-slide-left {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($caption-slide-left-before-bg-color, .5);
+        transition: all linear .3s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover {
+        figcaption,
+        .figcaption {
+            transform: translate(0, -50%);
+        }
+    }
+    figcaption,
+    .figcaption {
+        position: absolute;
+        transform: translate(100% + 1, -50%);
+        top: 50%;
+        right: 0;
+        transition: transform linear .3s;
+        z-index: 99;
+        background: $caption-figcaption-bg-color;
+        color: $caption-color;
+    }
+}

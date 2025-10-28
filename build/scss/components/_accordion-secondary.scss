@@ -1,0 +1,85 @@
+/******* accordion styles *******/
+
+// accordion styles
+.accordion-container.accordion-secondary {
+    max-width: 35.63rem;
+    margin: 0 auto;
+    .card {
+        border: none;
+        margin-bottom: 0.625rem;
+        @include font-size($small-font-sizes);
+        .card-header {
+            background: $secondary-color;
+            color: $white;
+            border: none;
+            @include breakpoint-min ($screen-medium) {
+                padding: 0.875rem 1.875rem;
+            }
+            &:first-child {
+                border-radius: 0;
+            }
+            h5 {
+                font-family: $font-family-base;
+                a {
+                    color: $white;
+                    font-size: 0.75rem;
+                    font-weight: $bold-font-weight;
+                    vertical-align: middle;
+                    @include breakpoint-min ($screen-medium) {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+        .card-block {
+            border: solid $light-grey;
+            border-width: 0 0.07143rem 0.07143rem;
+            border-top: none;
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @include breakpoint-min ($screen-medium) {
+                padding: 1.563rem 1.875rem;
+            }
+        }
+    }
+    .panel-icon {
+        .card {
+            .card-header {
+                background: none;
+                border-bottom: 0.07143rem solid $light-grey;
+                h5 {
+                    a {
+                        position: relative;
+                        color: $light-black;
+                        &:before {
+                            @include icomoon-css-content;
+                            position: absolute;
+                            top: 50%;
+                            left: -1.1rem;
+                            transform: translate(0, -50%);
+                            content: "\e923";
+                            transition: all linear .3s;
+                            font-size: 1rem;
+                            @include breakpoint-min ($screen-medium) {
+                                left: -2rem;
+                                font-size: 1.3rem;
+                            }
+                        }
+                        &[aria-expanded="true"] {
+                            background: none;
+                            &:before {
+                                content: "\e916";
+                            }
+                        }
+                    }
+                }
+            }
+            .card-block {
+                border: none;
+            }
+        }
+    }
+}

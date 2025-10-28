@@ -1,0 +1,208 @@
+// SCSS IMPORTS 
+// ============
+
+/*
+Name: 			main
+Author: 		waituk - (http://www.waituk.net)
+Version: 		1.0.0
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General styles and resets
+2. Bordered Document / .bordered-document
+3. Header / .main-header
+4. Banner
+5. Buttons / .btn
+6. Search form / .search-form
+7. Content block / .content-block
+8. Block Heading / .block-heading
+9. Parallax / .parallax
+10. Gallery list / .gallery-list
+11. Team / .team-container
+12. Count Block / .count-block
+13. Testimonial / .testimonial-container
+14. Logo Block / .logo-container
+15. Newsletter form / .waituk_newsletter-form
+16. Post Block / .post-grid
+17. Elements / .demo-wrapper
+18. Blog
+19. Footer
+20. Utilities
+-----------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. General styles and resets
+-------------------------------------------------------------------*/
+
+// ---  MODIFIERS  ---
+
+@import 'modifiers/mixins';
+@import 'modifiers/custom-variables';
+@import 'modifiers/rem';
+
+// Theme Color
+@import 'skins/construction';
+
+// // ---  PRELOADER ---
+@import 'components/preloader';
+
+//  --- BOOTSTRAP ---
+@import 'vendors/bootstrap/scss/variables';
+@import 'vendors/bootstrap/scss/mixins';
+@import "bootstrap-custom";
+@import 'vendors/bootstrap-slider-master/bootstrap-slider';
+@import 'vendors/bootstrap-select/bootstrap-select';
+
+
+// ---  BASE  ---
+@import 'base/base';
+
+
+
+// -- THEME ---
+@import 'base/colors';
+@import 'base/typography';
+
+
+// ---  LAYOUT  --- 
+/*------------------------------------------------------------------
+2. Bordered Document / .bordered-document
+-------------------------------------------------------------------*/
+@import 'components/bordered-document';
+/*------------------------------------------------------------------
+3. Header / .main-header
+-------------------------------------------------------------------*/
+@import 'layout/header';
+
+// // ---  COMPONENTS  ---
+@import 'components/navigation';
+@import 'components/cart';
+
+/*------------------------------------------------------------------
+4. Banner
+-------------------------------------------------------------------*/
+@import 'components/visual';
+// // ---  ELEMENTS  ---
+/*------------------------------------------------------------------
+5. Buttons / .btn
+-------------------------------------------------------------------*/
+@import 'components/button';
+@import 'components/button-alternate';
+
+// // ---  COMPONENTS ** Forms  ---
+/*------------------------------------------------------------------
+6. Search form / .search-form
+-------------------------------------------------------------------*/
+@import 'components/search-form';
+/*------------------------------------------------------------------
+7. Content block / .content-block
+-------------------------------------------------------------------*/
+@import 'components/content-block';
+/*------------------------------------------------------------------
+8. Block Heading / .block-heading
+-------------------------------------------------------------------*/
+@import 'components/block-heading';
+@import 'components/ico-boxes';
+/*------------------------------------------------------------------
+9. Parallax / .parallax
+-------------------------------------------------------------------*/
+@import 'components/parallax';
+/*------------------------------------------------------------------
+10. Gallery list / .gallery-list
+-------------------------------------------------------------------*/
+@import 'components/filter-nav';
+@import 'components/caption-slide-left';
+@import 'components/caption-fade-up';
+@import 'components/portfolio';
+@import 'components/hover-effects';
+/*------------------------------------------------------------------
+11. Team / .team-container
+-------------------------------------------------------------------*/
+@import 'components/team';
+/*------------------------------------------------------------------
+12. Count Block / .count-block
+-------------------------------------------------------------------*/
+@import 'components/count-block';
+/*------------------------------------------------------------------
+13. Testimonial / .testimonial-container
+-------------------------------------------------------------------*/
+@import 'components/testimonial';
+/*------------------------------------------------------------------
+14. Logo Block / .logo-container
+-------------------------------------------------------------------*/
+@import 'components/logo-block';
+
+// // ---  COMPONENTS ** Forms  ---
+/*------------------------------------------------------------------
+15. Newsletter form / .waituk_newsletter-form
+-------------------------------------------------------------------*/
+@import 'components/form';
+@import 'components/newsletter-form';
+/*------------------------------------------------------------------
+16. Post Block / .post-grid
+-------------------------------------------------------------------*/
+@import 'components/post';
+/*------------------------------------------------------------------
+17. Elements / .demo-wrapper
+-------------------------------------------------------------------*/
+@import 'components/social-networks';
+@import 'components/breadcrumb';
+@import 'components/caption-hover-full';
+@import 'components/fancybox';
+@import 'components/content-list';
+@import 'components/contact-form';
+@import 'components/contact-info';
+@import 'components/tab';
+@import 'components/tab-alternate';
+@import 'components/accordion';
+@import 'components/accordion-primary';
+@import 'components/pricing-block';
+@import 'components/parallax-images';
+@import 'components/grid-box';
+@import 'components/carousel';
+@import 'components/data-table';
+@import 'components/icon-list';
+@import 'components/pagination';
+@import 'components/divider';
+@import 'components/blockquotes';
+@import 'components/badge';
+@import 'components/rating';
+@import 'components/centered-col';
+@import 'components/date-time-picker';
+@import 'components/map';
+@import 'components/modal';
+@import 'components/progressbar';
+@import 'components/sign-up-form';
+@import 'components/range-slider';
+@import 'components/select-boxes';
+@import 'components/media-embed';
+@import 'components/select-pickers';
+@import 'components/page-banners';
+@import 'components/side-panel';
+@import 'components/site-search';
+@import 'components/tag';
+@import 'components/slider';
+// // ---  PAGES  ---
+/*------------------------------------------------------------------
+18. Blog
+-------------------------------------------------------------------*/
+@import 'components/blog';
+@import 'components/author';
+
+// -- WIDGETS ---
+@import 'widgets/recent-post';
+@import 'widgets/twitter';
+@import 'widgets/instagram';
+
+// -- FOOTER ---
+/*------------------------------------------------------------------
+19. Footer
+-------------------------------------------------------------------*/
+@import 'layout/footer';
+
+// ---  UTILITIES  ---
+/*------------------------------------------------------------------
+20. Utilities
+-------------------------------------------------------------------*/
+@import 'components/utilities';

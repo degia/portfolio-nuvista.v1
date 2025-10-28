@@ -1,0 +1,34 @@
+/******* centered col styles *******/
+
+// Centered Col styles
+// 3-col
+.center-aligned-3-col {
+    @include media-breakpoint-between (md, xl) {
+        max-width: 25%;
+        margin: 0 auto;
+    }
+}
+
+// 4-col
+.center-aligned-4-col {
+    @include media-breakpoint-between (md, xl) {
+        max-width: 33.33%;
+        margin: 0 auto;
+    }
+}
+
+// 6-col
+.center-aligned-6-col {
+    @include media-breakpoint-between (md, xl) {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+// 8-col
+.center-aligned-8-col {
+    @include media-breakpoint-between (md, xl) {
+        max-width: 66.66%;
+        margin: 0 auto;
+    }
+}

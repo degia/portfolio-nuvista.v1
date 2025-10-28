@@ -1,0 +1,103 @@
+/******* post styles *******/
+
+// post styles
+.post-grid {
+    color: $post-link-color;
+    a {
+        color: $post-link-color;
+    }
+    &:hover {
+        .content-title {
+            a {
+                color: $post-link-hover-color;
+            }
+        }
+        .post-link-holder {
+            a {
+                color: $post-link-hover-color;
+                .fa {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+        .post-text-block {
+            background: $post-text-block-bg-color;
+        }
+        .post-date {
+            background: $post-date-hover-bg-color;
+        }
+        .post-img {
+            img {
+                filter: grayscale(0);
+            }
+        }
+    }
+    .content-title {
+        text-transform: capitalize;
+    }
+}
+
+.post-img {
+    position: relative;
+    margin-bottom: -2rem;
+    img {
+        transition: filter linear .3s, all linear .3s;
+        filter: grayscale(100%);
+    }
+}
+
+.post-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    color: $post-date-color;
+    background: $post-date-bg-color;
+    width: 4rem;
+    padding: .715rem .9rem;
+    line-height: 1.3;
+    font-weight: $medium-font-weight;
+}
+
+.post-text-block {
+    position: relative;
+    padding: 1.25rem;
+    box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba($post-text-block-box-shadow-color, 0.1);
+    transition: all linear .3s;
+    p {
+        margin-top: 1.75rem;
+        margin-bottom:0;
+    }
+    .content-sub-title {
+        margin: 0;
+    }
+    .post-meta {
+        margin-top: 2rem;
+    }
+}
+
+.post-link-holder,
+.post-social {
+    width: 50%;
+    float: left;
+}
+
+.post-link-holder {
+    line-height: 0.875rem;
+    a {
+        display: inline-block;
+        position: relative;
+        padding-right: 1.429rem;
+    }
+    .fa {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-1rem, -50%);
+        transition: all linear .2s;
+    }
+}

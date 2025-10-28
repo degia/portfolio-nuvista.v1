@@ -1,0 +1,124 @@
+/******* search form styles *******/
+
+// search form styles
+.search-form-wrapper {
+    @include v-align;
+    position: fixed;
+    background: $search-form-bg-color;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+    height: 100vh;
+    z-index: 999999999;
+    .close {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        color: $search-close-color;
+        text-shadow: none;
+        box-shadow: none;
+        opacity: 1;
+        font-size: 3rem;
+        background: none;
+        &:hover,
+        &:focus {
+            background: none;
+            outline: none;
+        }
+    }
+    .holder {
+        min-width: 300px;
+        max-width: 800px;
+        width: 95%;
+        position: relative;
+        transform: translate(0, -200%);
+        transition: all 0.3s ease-in-out .06s;
+    }
+    input[type="search"] {
+        padding-right: 2rem;
+        line-height: 4rem;
+        @include breakpoint-min ($screen-medium) {
+            padding-right: 4rem;
+        }
+    }
+    .form-control,
+    input,
+    textarea {
+        width: 100%;
+        padding-right: 3.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        height: 4.429rem;
+        color: $search-fields-color;
+        &::selection {
+            background: $search-fields-selection-color;
+        }
+        &::-moz-selection {
+            background: $search-fields-selection-color;
+        }
+        &:focus::-webkit-input-placeholder {
+            text-indent: -999px
+        }
+        &:focus::-moz-input-placeholder {
+            text-indent: -999px
+        }
+        &:focus,
+        &:hover {
+            border-color: $search-fields-color;
+            cursor: pointer;
+            & ~ button {
+                color: $search-fields-color;
+            }
+        }
+    }
+    @include placeholder {
+        color: $search-fields-placeholder-color;
+    }
+    button {
+        text-align: center;
+        background: none;
+        border: 0;
+        color: $search-button-color;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        font-size: 1.5rem;
+        line-height: 3rem;
+        padding:0;
+        &:hover {
+            color: $search-fields-color;
+            outline: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    @include breakpoint-min ($screen-medium) {
+        .holder {
+            width: 80%;
+        }
+        .close {
+            right: 2rem;
+        }
+        .form-control,
+        button {
+            font-size: 3rem;
+        }
+    }
+}
+
+.search-active {
+    overflow: hidden;
+    .search-form-wrapper {
+        opacity: 1;
+        visibility: visible;
+    }
+    .holder {
+        transform: translate(0);
+    }
+}

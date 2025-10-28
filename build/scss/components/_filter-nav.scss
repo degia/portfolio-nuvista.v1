@@ -1,0 +1,68 @@
+/******* filter nav styles *******/
+
+// filter nav styles
+.filter-nav {
+    @extend %listreset;
+    text-transform: uppercase;
+    font-size: .7rem;
+     margin-bottom: #{$global-space * 4};
+    li {
+        display: inline-block;
+        &:not(:first-child):before {
+            content: '-';
+            display: inline-block;
+            vertical-align: middle;
+            color: $filter-nav-button-color;
+        }
+    }
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-family: $font-family-base;
+        font-weight: 400;
+        color: $filter-nav-button-color;
+
+        &:hover {
+            color: $filter-nav-hover-color;
+        }
+
+        &.is-checked {
+            color: $filter-nav-active-color;
+        }
+    }
+    @include breakpoint-min($screen-medium) {
+        margin-bottom: #{$global-space * 5};
+        font-size: .875rem;
+        li {
+            &:not(:first-child):before {
+                margin: 0 .875rem;
+            }
+        }
+    }
+}
+// filter nav v2 styles
+.filter-nav-v2{
+    margin-bottom: #{$global-space * 1};
+    li {
+        &:before {
+            color: $light-grey;
+        }
+    }
+
+    button {
+        color: $light-grey;
+
+        &:hover {
+            color: $light-black;
+        }
+
+        &.is-checked {
+            color: $dark-grey;
+        }
+    }
+     @include breakpoint-min($screen-medium) {
+        margin-bottom: #{$global-space * 5};
+    }
+}

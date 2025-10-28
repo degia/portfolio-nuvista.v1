@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------
+1. General styles and resets
+-------------------------------------------------------------------*/
+
+// ---  MODIFIERS  ---
+
+@import 'modifiers/mixins';
+@import 'modifiers/custom-variables';
+@import 'modifiers/rem';
+
+// Theme Color
+@import 'skins/default';
+
+
+
+//  --- BOOTSTRAP ---
+@import 'vendors/bootstrap/scss/variables';
+@import 'vendors/bootstrap/scss/mixins';
+@import "bootstrap-custom";
+@import 'vendors/bootstrap-slider-master/bootstrap-slider';
+@import 'vendors/bootstrap-select/bootstrap-select';
+
+
+// ---  BASE  ---
+@import 'base/base';
+
+
+
+// -- THEME ---
+@import 'base/colors';
+@import 'base/typography';
+
+
+// ---  LAYOUT  --- 
+/*------------------------------------------------------------------
+
+3. Header / .main-header
+-------------------------------------------------------------------*/
+@import 'layout/header';
+
+// // ---  COMPONENTS  ---
+@import 'components/navigation';
+@import 'components/cart';
+
+/*------------------------------------------------------------------
+4. Banner
+-------------------------------------------------------------------*/
+@import 'components/visual';
+// // ---  ELEMENTS  ---
+/*------------------------------------------------------------------
+5. Buttons / .btn
+-------------------------------------------------------------------*/
+@import 'components/button';
+
+// // ---  COMPONENTS ** Forms  ---
+/*------------------------------------------------------------------
+6. Search form / .search-form
+-------------------------------------------------------------------*/
+@import 'components/search-form';
+/*------------------------------------------------------------------
+7. Content block / .content-block
+-------------------------------------------------------------------*/
+@import 'components/content-block';
+/*------------------------------------------------------------------
+8. Block Heading / .block-heading
+-------------------------------------------------------------------*/
+@import 'components/block-heading';
+/*------------------------------------------------------------------
+9. Parallax / .parallax
+-------------------------------------------------------------------*/
+@import 'components/parallax';
+/*------------------------------------------------------------------
+14. Logo Block / .logo-container
+-------------------------------------------------------------------*/
+@import 'components/hover-effects';
+@import 'components/logo-block';
+
+// // ---  COMPONENTS ** Forms  ---
+/*------------------------------------------------------------------
+15. Newsletter form / .waituk_newsletter-form
+-------------------------------------------------------------------*/
+@import 'components/form';
+@import 'components/newsletter-form';
+/*------------------------------------------------------------------
+17. Elements / .demo-wrapper
+-------------------------------------------------------------------*/
+@import 'components/social-networks';
+@import 'components/parallax-images';
+@import 'components/centered-col';
+@import 'components/intro';
+
+// -- FOOTER ---
+/*------------------------------------------------------------------
+19. Footer
+-------------------------------------------------------------------*/
+@import 'layout/footer';
+
+// ---  UTILITIES  ---
+/*------------------------------------------------------------------
+20. Utilities
+-------------------------------------------------------------------*/
+@import 'components/utilities';

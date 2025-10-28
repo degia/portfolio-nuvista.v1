@@ -1,0 +1,94 @@
+/******* site search styles *******/
+
+// site search
+.search-form-wrapper {
+    &.fullscreen-search {
+        background: none;
+        .holder {
+            background: $fullscreen-site-search-holder-bg-color;
+            padding: 15px;
+            .close {
+                top: 0;
+                right: 0;
+                font-size: 1rem;
+            }
+            button {
+                right: 0.5rem;
+                font-size: 1rem;
+            }
+            input[type="search"] {
+                padding-right: 1.5rem;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .holder {
+                max-width: 1200px;
+                background: $fullscreen-site-search-holder-bg-color;
+                padding: 50px;
+                .close {
+                    top: 0;
+                    right: 0;
+                    font-size: 2rem;
+                }
+                input[type="search"] {
+                    padding-right: 4rem;
+                }
+                button {
+                    right: 50px;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.search-form-wrapper {
+    &.dark-text {
+        .form-control,
+        input,
+        textarea,
+        button,
+        .close {
+            color: $fullscreen-search-close-color-light-bg;
+            border-color: $fullscreen-search-close-border-color-light-bg;
+        }
+        button:hover {
+            color: $fullscreen-search-close-hover-color-light-bg;
+        }
+        .form-control:focus ~ button,
+        .form-control:hover ~ button,
+        input:focus ~ button,
+        input:hover ~ button,
+        textarea:focus ~ button,
+        textarea:hover ~ button {
+            color: $fullscreen-search-fields-color-light-bg;
+        }
+        @include placeholder {
+            color: $fullscreen-search-fields-color-light-bg;
+        }
+    }
+    &.white-text {
+        .form-control,
+        input,
+        textarea,
+        button,
+        .close {
+            color: $fullscreen-search-close-color-dark-bg;
+            border-color: $fullscreen-search-close-border-color-dark-bg;
+        }
+        button:hover {
+            color: $fullscreen-search-close-hover-color-dark-bg;
+        }
+        .form-control:focus ~ button,
+        .form-control:hover ~ button,
+        input:focus ~ button,
+        input:hover ~ button,
+        textarea:focus ~ button,
+        textarea:hover ~ button {
+            color: $fullscreen-search-fields-color-dark-bg;
+        }
+        @include placeholder {
+            color: $fullscreen-search-fields-color-dark-bg;
+        }
+    }
+}

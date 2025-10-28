@@ -1,0 +1,162 @@
+/******* tab styles *******/
+
+// tab styles
+.tab-container {
+    text-align: center;
+    .nav-tabs {
+        font-size: .6rem;
+        .nav-link {
+            color: $tab-nav-link-color;
+            font-weight: $bold-font-weight;
+            text-transform: uppercase;
+        }
+        .nav-item {
+            display: inline-block;
+            float: none;
+            & + .nav-item {
+                margin: 0 0 0 -0.4125rem;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            font-size: 0.875rem;
+        }
+    }
+    // button style tab
+    .tab-button-nav {
+        border-bottom: 0;
+        text-align: center;
+        display: block;
+        .nav-link {
+            padding: 0.75rem .4rem;
+            border: 0;
+            color: $tab-nav-link-color;
+            border-radius: 0;
+            background: $tab-nav-link-bg-color;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                background: $tab-nav-link-bg-hover-color;
+                color: $tab-nav-link-hover-color;
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                background: $tab-nav-link-bg-hover-color;
+                color: $tab-nav-link-hover-color;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.6375rem 2.813rem;
+            }
+        }
+    }
+    .tab-content {
+        @include font-size($small-font-sizes);
+        color: $tab-content-color;
+        letter-spacing: 0.07143rem;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // text style tab
+    .tab-text-nav {
+        border-width: 0 0 0.1429rem;
+        border-color: $tab-nav-border-color;
+        display: inline-block;
+        .nav-link {
+            padding: 0.75rem .4rem;
+            border: 0;
+            color: $tab-nav-link-color;
+            position: relative;
+            &:before {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                content: '';
+                height: 0.13rem;
+                background: $tab-nav-link-before-color;
+                transition: all 0.3s ease-in-out .06s;
+                visibility: hidden;
+                opacity: 0;
+                transform: scale(0);
+            }
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $tab-nav-text-link-hover-color;
+                background: none;
+                &:before {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $tab-nav-text-link-hover-color;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.6375rem 2.813rem;
+            }
+        }
+    }
+    // icon style tab
+    .tab-icon-nav {
+        border-width: 0;
+        border-color: $tab-nav-border-color;
+        display: inline-block;
+        .icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: $tab-nav-link-color;
+        }
+        .nav-link {
+            padding: 0.75rem .4rem;
+            border: 0;
+            color: $tab-nav-link-color;
+            position: relative;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $tab-nav-text-link-hover-color;
+                background: none;
+                .icon {
+                    color: $tab-nav-link-color;
+                }
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $tab-nav-text-link-hover-color;
+                .icon {
+                    color: $tab-nav-link-color;
+                }
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.75rem 2rem;
+            }
+        }
+    }
+}

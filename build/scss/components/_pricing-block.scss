@@ -1,0 +1,148 @@
+/******* pricing block styles *******/
+
+// pricing block styles
+.pricing-block {
+    padding: 3.5rem 1rem;
+    @include transition(all linear .2s);
+    font-weight: 400;
+    &:hover {
+        box-shadow: 0 2px 9.3px 0.7px rgba(1, 2, 2, 0.1);
+    }
+    h3 {
+        @include font-size($heading-m-sizes);
+        margin-bottom: 1.1rem;
+        font-weight: 700;
+        color: $pricing-block-h3-title;
+    }
+    h4 {
+        color: $pricing-block-h4-title;
+        font-family: $font-family-base;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+    .price {
+        @include font-size($heading-m-sizes);
+        letter-spacing: 0.2143rem;
+        font-family: $headings-font-family;
+    }
+    .content-sub-title {
+        font-style: italic;
+    }
+    .btn-holder {
+        margin-top: 3.75rem;
+    }
+    .col-wrap {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
+        &:first-child {
+            border: solid $pricing-block-border-color;
+            border-width: 0 0 0.07143rem;
+        }
+    }
+    @include breakpoint-min ($screen-small) {
+        .col-wrap {
+            padding-bottom: 0;
+            &:first-child {
+                border-width: 0 0.07143rem 0 0;
+            }
+        }
+    }
+    @include breakpoint-min ($screen-medium) {
+        padding: 4.5rem 1rem;
+        h3 {
+            margin-bottom: 2rem;
+        }
+    }
+    @include breakpoint-min ($screen-large) {
+        padding: 5.5rem 1rem;
+        h3 {
+            margin-bottom: 3rem;
+        }
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        padding: 5.625rem 1rem 7.5rem;
+        h3 {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+// pricing block v1 styles
+.pricing-box-v1 {
+    border: $pricing-block-border-color 1px solid;
+    margin-top: #{$global-space * 5};
+    @include transition(all linear .2s);
+    &:hover {
+        box-shadow: 0 2px 9.3px 0.7px rgba(1, 2, 2, 0.1);
+    }
+    @include breakpoint-min ($screen-medium) {
+        margin-top: 0;
+    }
+    .pricing-title {
+        padding: 1.875rem 0.9375rem;
+        h4 {
+            margin: 0;
+        }
+    }
+    .price {
+        @include font-size($heading-m-sizes);
+        letter-spacing: 0.2143rem;
+        font-family: $headings-font-family;
+        margin: 1.563rem 0;
+    }
+    .plan-features {
+        ul {
+            @extend %listreset;
+            li {
+                border-top: $plan-features-border-color 1px solid;
+                padding: 0.625rem 0.9375rem;
+            }
+        }
+    }
+    .btn-holder {
+        border-top: $plan-features-btn-holder-border-color 1px solid;
+        padding: 1.875rem 0;
+    }
+    .bg-primary {
+        h4 {
+            color: $pricing-block-alter-h4-title;
+        }
+    }
+    // pricing block v2 styles
+    &.pricing-box-v2 {
+        margin-top: #{$global-space * 12};
+        @include breakpoint-min ($screen-medium) {
+            margin-top: #{$global-space * 8};
+        }
+        .price {
+            width: 8.75rem;
+            height: 8.75rem;
+            margin: -4.375rem auto 2.188rem;
+            line-height: 9.063rem;
+            border-radius: 50%;
+            border: $pricing-block-border-color 1px solid;
+        }
+        .divider-double-border {
+            max-width: 50%;
+            margin: 0.9375rem auto;
+        }
+    }
+}
+
+.demo-wrapper {
+    .row [class*="col-"]:nth-of-type(1) {
+        .pricing-box-v1:first-child {
+            margin-top: #{$global-space * 0};
+            @include breakpoint-min ($screen-medium) {
+                margin-top: 0;
+            }
+        }
+        .pricing-box-v2:first-child {
+            margin-top: #{$global-space * 6};
+            @include breakpoint-min ($screen-medium) {
+                margin-top: #{$global-space * 8};
+            }
+        }
+    }
+}

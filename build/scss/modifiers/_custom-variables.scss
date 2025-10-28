@@ -1,0 +1,44 @@
+@import "../base/colors";
+
+
+//fonts
+$thin-font-weight:300;
+$regular-font-weight:400;
+$medium-font-weight:500;
+$semi-font-weight:600;
+$bold-font-weight:700;
+$extra-bold-font-weight:800;
+$black-font-weight:900;
+
+// body
+$body-bg: 						$white;
+$body-color: 					$abbey;
+
+
+// spacer
+$global-space:                  0.625rem;
+
+
+// button
+$btn-padding-v:                 $global-space;
+$btn-padding-h:                 $global-space * 2;
+
+// header
+$header-height:					6.063rem;
+$small-header-height:			3.875rem;
+
+// breakpoints
+$screen-small : 				576px;
+$screen-medium: 				767px;
+$screen-large : 				991px;
+$screen-extra-large : 			1230px;
+$screen-wide : 					1600px;
+
+// breakpoints
+$breakpoints: (
+  screen-small : 				$screen-small,
+  screen-medium: 				$screen-medium,
+  screen-large : 				$screen-large,
+  screen-extra-large : 			$screen-extra-large,
+  screen-wide : 				$screen-wide
+);

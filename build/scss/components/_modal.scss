@@ -1,0 +1,41 @@
+/******* modal styles *******/
+
+// modal styles
+.modal-backdrop {
+    z-index: 999999999;
+}
+
+.modal {
+    z-index: 9999999999;
+}
+
+.modal-wrap {
+    button.close {
+        position: absolute;
+        top: 17px;
+        right: 15px;
+        padding: 0;
+        box-shadow: none;
+        text-shadow: none;
+        outline: none;
+    }
+    .form-group {
+        @include breakpoint-min ($screen-medium) {
+            margin-bottom: 1.375rem;
+        }
+    }
+    &.large-modal {
+        @include breakpoint-min ($screen-medium) {
+            .modal-dialog {
+                max-width: 1170px;
+            }
+        }
+    }
+    .modal-footer {
+        padding: 30px 15px;
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+}

@@ -1,0 +1,61 @@
+/******* Pagination styles *******/
+
+// pagination styles
+.pagination-block {
+    .pagination {
+        margin: 0;
+        > li {
+            a,
+            span {
+                color: $pagination-link-color;
+                padding: 0.625rem 0.9375rem;
+                border-color: $pagination-border-color;
+            }
+        }
+        &>li>a:focus,
+        &>li>a:hover,
+        &>li>span:focus,
+        &>li>span:hover {
+            background-color: $pagination-bg-hover-color;
+            border-color: $pagination-border-hover-color;
+            color: $pagination-link-hover-color;
+        }
+        & >.active>a,
+        & >.active>a:focus,
+        & >.active>a:hover,
+        & >.active>span,
+        & >.active>span:focus,
+        & >.active>span:hover {
+            background-color: $pagination-bg-hover-color;
+            border-color: $pagination-border-hover-color;
+            color: $pagination-link-hover-color;
+        }
+        .disabled .page-link {
+            background-color: $pagination-disabled-bg-color;
+            border-color: $pagination-border-color;
+            color: $pagination-disabled-link-color;
+        }
+        &.solid-nav {
+            > li {
+                margin-left: 0.125rem;
+                background-color: $pagination-solid-bg-color;
+                transition: all linear 0.2s;
+                .page-link {
+                    background: none;
+                    border: none;
+                    color: $pagination-solid-link-color;
+                }
+                &:hover {
+                    background-color: $pagination-bg-hover-color;
+                    border-color: $pagination-border-hover-color;
+                    .page-link {
+                        color: $pagination-link-hover-color;
+                        span {
+                            color: $pagination-link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

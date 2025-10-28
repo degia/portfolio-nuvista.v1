@@ -1,0 +1,77 @@
+/******* contact info styles *******/
+
+// contact info styles
+
+.contact-title {
+    font: 700 0.8571rem/2.1 $font-family-base;
+    margin-bottom: #{$global-space * 4.5};
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 7.5};
+    }
+}
+
+.info-slot {
+    margin-bottom: #{$global-space * 3};
+    margin-top: #{$global-space * 3};
+    color: $info-slot-color;
+    font-size: 0.75rem;
+    .icon {
+        width: 4.286rem;
+        padding-right: 0.7143rem;
+        font-size: 3.571rem;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .text {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(100% - 4.643rem);
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 9};
+        margin-top: -#{$global-space * 2};
+        .icon {
+            font-size: 6.571rem;
+            width: 7.286rem;
+        }
+        .text {
+            width: calc(100% - 7.643rem);
+        }
+    }
+    address {
+        margin: 0;
+    }
+}
+
+.contact-list {
+    a {
+        color: $contact-list-link-color;
+        &:hover {
+            color: $contact-list-link-hover-color;
+        }
+    }
+    li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .label-text {
+        display: inline-block;
+        width: 6.143rem;
+        text-transform: uppercase;
+    }
+}
+
+.map-holder {
+    width: 100%;
+    iframe {
+        width: 100%;
+        display: block;
+        pointer-events: none;
+    }
+}
+
+.map-holder iframe.clicked {
+    pointer-events: auto;
+}

@@ -1,0 +1,87 @@
+/******* newsletter form styles *******/
+
+// newsletter form styles
+.waituk_newsletter-form {
+    max-width: 35.13rem;
+    margin: 0 auto;
+    .btn {
+        @include box-shadow(none);
+        margin: 0 auto;
+        min-width: 10.5rem;
+        display: block;
+        font-weight: $medium-font-weight;
+        padding: 0.7rem 1.071rem 0.7rem;
+        line-height: 1.2;
+        &.btn-trans-dark-gray {
+            line-height: 1.2;
+            padding: 0.9rem 1.071rem 0.7rem;
+            color: $form-color;
+        }
+    }
+    input[type="email"] {
+        background: none;
+        color: $form-color;
+        border-color: $newsletter-form-border-color;
+        letter-spacing: 0rem;
+        @include breakpoint-min ($screen-extra-large) {
+            letter-spacing: 0.2429rem;
+        }
+    }
+    @include placeholder {
+        color: $form-color;
+    }
+    @include breakpoint-min ($screen-medium) {
+        .input-holder {
+            float: left;
+            width: 100%;
+            max-width: calc(100% - 12.38rem);
+            margin: 0 #{$global-space * 3} 0 0;
+        }
+        .btn {
+            min-width: 10.5rem;
+            &.btn-trans-dark-gray {
+                padding: 0.8rem 1.071rem 0.7rem;
+                &:hover {
+                    color: $newsletter-button-hover-color;
+                }
+            }
+        }
+    }
+    // newsletter v1
+    &.newsletter-v1 {
+        max-width: 100%;
+        input[type="email"] {
+            padding-right: 4.375rem;
+        }
+        .input-holder {
+            float: none;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            position: relative;
+        }
+        .btn {
+            position: absolute;
+            right: 0.9375rem;
+            top: 50%;
+            min-width: auto;
+            padding: 0 0;
+            background: none;
+            border: none;
+            color: $form-color;
+            transform: translate(0, -50%);
+        }
+    }
+    // newsletter v2
+    &.newsletter-v2 {
+        max-width: 100%;
+        @include breakpoint-min ($screen-medium) {
+            .input-holder {
+                max-width: calc(100% - 8.40rem);
+            }
+        }
+        .btn {
+            min-width: 6.5rem;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+/******* recent post styles *******/
+
+// recent post styles
+.post-block {
+    .post-holder {
+        position: relative;
+        padding-left: 5rem;
+        margin-top: 1.875rem;
+        min-height: 3.438rem;
+        .post-avatar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3.438rem;
+            height: 3.438rem;
+            border-radius: 50%;
+            img {
+                border-radius: 50%;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba($recent-post-avatar-before-bg-color, 0.5);
+                border-radius: 50%;
+                transition: all linear .3s;
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .post-desc {
+            h6 {
+                margin: 0;
+                font-size: 0.875rem;
+                font-weight: $regular-font-weight;
+                font-family: $font-family-base;
+                color: $recent-post-title-color;
+                a {
+                    color: $recent-post-link-color;
+                }
+            }
+            p {
+                margin: 0;
+                font-size: 0.75rem;
+                color: $recent-post-desc-color;
+                line-height: 1.575rem;
+                a {
+                    color: $recent-post-link-color;
+                }
+            }
+        }
+        &:hover {
+            .post-desc {
+                a {
+                    color: $recent-post-link-hover-color;
+                }
+            }
+            .post-avatar {
+                &:before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

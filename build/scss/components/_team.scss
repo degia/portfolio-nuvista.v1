@@ -1,0 +1,47 @@
+/******* team styles *******/
+
+// team styles
+.team-box {
+    position: relative;
+    figcaption,
+    .figcaption {
+        background: $team-hover-bg;
+        color: $team-hover-title-color;
+    }
+    .team-des-v2 {
+        background: none;
+        color: $team-desc-color;
+        position: static;
+        opacity: 1;
+        margin-top: 2.813rem;
+        padding: 0;
+        .content-title {
+            margin-bottom: 1.875rem;
+            text-transform: capitalize;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .sub {
+            color: $team-desc-sub-color;
+            font-style:normal;
+        }
+    }
+    &:hover {
+        .team-des-v2 {
+            .name {
+                color: $team-desc-name-hover-color;
+            }
+            .sub {
+                color: $team-desc-sub-hover-color;
+            }
+        }
+    }
+}
+
+.sub {
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+    color: $team-hover-subtitle-color;
+    font-style:italic;
+}

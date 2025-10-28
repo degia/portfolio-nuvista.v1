@@ -1,0 +1,21 @@
+/******* badge styles *******/
+
+// badge styles
+.label-block {
+    .custom-badge {
+        font-family: $font-family-base;
+        &.badge {
+            background: $badge-bg-color;
+            color: $badge-color;
+        }
+    }
+}
+
+.btn {
+    .custom-badge {
+        &.badge {
+            background: $badge-btn-bg-color;
+            color: $badge-btn-color;
+        }
+    }
+}

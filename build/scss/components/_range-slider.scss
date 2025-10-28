@@ -1,0 +1,66 @@
+/******* range slider styles *******/
+
+// range slider styles
+.waituk_range-block {
+    .slider {
+        &.slider-horizontal {
+            width: 100%;
+        }
+        .slider-track {
+            background: $range-slider-bg-color;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        .slider-selection {
+            background: $range-slider-selection-bg-color;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        .slider-handle {
+            background: $range-slider-handle-color;
+        }
+        .slider-tick {
+            background: $range-slider-tick-color;
+            &.in-selection {
+                background: $range-slider-tick-selection-color;
+            }
+        }
+    }
+}
+
+.tooltip.in {
+    filter: alpha(opacity=90);
+    opacity: .9;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.tooltip.top .tooltip-arrow {
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: $tooltip-border-color;
+}
+
+.tooltip.left .tooltip-arrow {
+    top: 50%;
+    right: -5px;
+    margin-top: -5px;
+    border-width: 5px 0 5px 5px;
+    border-left-color: $tooltip-border-color;
+}
+
+.tooltip.right .tooltip-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0;
+    border-right-color: $tooltip-border-color;
+}

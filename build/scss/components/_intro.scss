@@ -1,0 +1,80 @@
+/******* intro styles *******/
+
+// intro styles
+.intro-box {
+    position: relative;
+    margin-top: #{$global-space * 3};
+    @include breakpoint-min ($screen-medium) {
+        margin-top: #{$global-space * 6};
+    }
+    .intro-img {
+        box-shadow: 0 10px 14px 2px rgba(36, 83, 107, 0.23);
+        transition: all linear .2s;
+        border-radius: 15px;
+        max-width: 370px;
+        margin: 0 auto;
+        img {
+            border-radius: 15px;
+        }
+        @include breakpoint-min ($screen-medium) {
+            max-width: 100%;
+        }
+    }
+    .sub {
+        color: $light-grey;
+        font-style: normal;
+        font-weight: $regular-font-weight;
+        margin: 2.5rem 0 0.5rem;
+        display: block;
+    }
+    .content-title {
+        text-transform: capitalize;
+        transition: all linear .2s;
+    }
+    &:hover {
+        .content-title {
+            color: $primary-color;
+        }
+        .intro-img {
+            transform: translate(0, -.7143rem);
+        }
+    }
+}
+
+.intro-banner {
+    p {
+        font-size: 0.75rem;
+        @include breakpoint-min ($screen-medium) {
+            font-size: 1.143rem;
+        }
+    }
+    .btn {
+        margin-bottom: 15px;
+        min-width: 8rem;
+        padding: .6rem;
+        @include breakpoint-min ($screen-medium) {
+            min-width: 16.9rem;
+            padding: 0.9375rem;
+        }
+    }
+    &.visual-inner {
+        padding: 7.125rem 0;
+        @include breakpoint-min ($screen-medium) {
+            padding: 3.75rem 0;
+        }
+        @include breakpoint-min ($screen-large) {
+            padding: 5rem 0;
+        }
+        @include breakpoint-min ($screen-extra-large) {
+            padding: 6.25rem 0;
+        }
+    }
+}
+
+.intro-slide img {
+    max-height: 80px;
+}
+
+.intro-slide.owl-carousel .owl-item img {
+    width: auto;
+}

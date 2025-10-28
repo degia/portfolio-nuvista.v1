@@ -1,0 +1,139 @@
+/* typography */
+
+// import link for google font
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i');
+@import 'https://fonts.googleapis.com/css?family=Just+Another+Hand';
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+// create font variable
+$just-another-hand: 'Just Another Hand',cursive;
+$josefin: 'Josefin Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+$montserrat: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+$poppins: "Poppins","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+// define font family
+$font-family-base: $poppins; // global font family
+$line-height-base: 1.71428571; // global line height
+
+
+// heading font variable
+$headings-font-family: $josefin;
+$regular-font-weight: 500;
+$headings-line-height: 1.1;
+
+// base font size
+$base-font-size: (
+    null: (0.75rem, 2.1),
+    screen-medium: 0.8571rem 
+);  
+
+body {
+    font-weight: 400;
+    font-family: $font-family-base;
+    letter-spacing: 0.0625rem;
+    color: $body-color;
+    @include font-size($base-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.9375rem;
+    font-family: $headings-font-family;
+    color: $headings-color;
+    line-height: $headings-line-height;
+}
+
+// heading (h1)
+$h1-font-sizes: ( 
+    null: (1.875rem, 1.2), 
+    screen-small: 2.25rem, 
+    screen-medium: 2.625rem, 
+    screen-large: 3rem, 
+    screen-extra-large: 3.375rem, 
+    screen-wide: 3.75rem, 
+    );
+h1 {
+    @include font-size($h1-font-sizes);
+}
+
+// heading (h2)
+$h2-font-sizes: ( 
+    null: (1.5rem, 1.2), 
+    screen-small: 1.875rem, 
+    screen-medium: 2.25rem, 
+    screen-large: 2.625rem, 
+    screen-extra-large: 3rem
+    );
+h2 {
+    @include font-size($h2-font-sizes);
+    font-weight: $bold-font-weight;
+    color: $headings-h2-color;
+    letter-spacing:  0.125rem;
+}
+
+// heading (h3)
+$h3-font-sizes: ( 
+    null: (1.125rem, 1.2), 
+    screen-small: 1.25rem, 
+    screen-medium: 1.5rem, 
+    screen-large: 1.75rem, 
+    screen-extra-large: 1.875rem
+    );
+h3 {
+    @include font-size($h3-font-sizes);
+    font-weight: $bold-font-weight;
+}
+
+// normal font variation
+$normal-font-sizes: ( 
+    null: (0.875rem, 1.2), 
+    screen-small: 0.9375rem, 
+    screen-medium: 1rem, 
+    screen-large: 1.063rem, 
+    screen-extra-large: 1.125rem
+    );
+// small font variation
+$small-font-sizes: ( 
+    null: (0.75rem, 2)
+    );
+// normal font variation
+$normal-font-m-sizes: ( 
+    null: (0.75rem, 2.1), 
+    screen-small: 0.875rem, 
+    screen-medium: 1rem
+    );
+// heading small size
+$heading-s-sizes: ( 
+    null: (1.125rem, 1.2), 
+    screen-small: 1.125rem, 
+    screen-medium: 1.25rem, 
+    screen-large: 1.375rem, 
+    screen-extra-large: 1.5rem
+    );
+// heading medium size
+$heading-m-sizes: ( 
+    null: (1.25rem, 1.2), 
+    screen-small: 1.5rem, 
+    screen-medium: 1.625rem, 
+    screen-large: 1.75rem, 
+    screen-extra-large: 1.875rem
+    );
+// heading large size
+$heading-l-sizes: ( 
+    null: (1.5rem, 1.2), 
+    screen-small: 1.75rem, 
+    screen-medium: 2rem, 
+    screen-extra-large: 2.25rem
+    );
+// cursive font style
+.cursive-style {
+    font-family: $just-another-hand;
+}
+
+// button font family
+$button-font-family: $poppins;

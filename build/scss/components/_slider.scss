@@ -1,0 +1,82 @@
+/******* slider styles *******/
+
+// slider styles
+.slider-title {
+    @include font-size($h1-font-sizes);
+    font-family: $headings-font-family;
+    color: $slider-title-color;
+    display: block;
+    font-weight: 300;
+    margin-bottom: #{$global-space * 2};
+    span {
+        color: $slider-title-span-color;
+    }
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: #{$global-space * 3};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 3};
+    }
+    &.text-white {
+        @include font-size($h2-font-sizes);
+    }
+}
+
+.slider-main-title {
+    color: $slider-main-title;
+    @include font-size($h1-font-sizes);
+    font-family: $font-family-base;
+    font-weight: $black-font-weight;
+    text-transform: uppercase;
+    margin-bottom: #{$global-space * 3};
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: #{$global-space * 5};
+    }
+    @include breakpoint-min ($screen-large) {
+        font-size: 10rem;
+        line-height: 10rem;
+        letter-spacing: 1.563rem;
+        margin-bottom: #{$global-space * 7};
+    }
+}
+
+.slider-sub-title {
+    color: $slider-sub-title-color;
+    @include font-size($h3-font-sizes);
+    text-transform: uppercase;
+    font-family: $headings-font-family;
+    font-weight: $semi-font-weight;
+    letter-spacing: 0.3125rem;
+    margin-bottom: #{$global-space * 2};
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: #{$global-space * 4};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 6};
+    }
+}
+
+.slider-text {
+    color: $slider-text-color;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+    font-weight: $regular-font-weight;
+    margin-bottom: #{$global-space * 3};
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: #{$global-space * 6};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 10};
+    }
+}
+
+.tparrows {
+    background: $slider-tp-arrows-bg-color;
+    &:before {
+        color: $slider-tp-arrows-arrow-color;
+    }
+}
+
+.tparrows:hover {
+    background: $slider-tp-arrows-hover-bg-color;
+}

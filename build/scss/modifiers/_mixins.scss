@@ -1,0 +1,353 @@
+@import '../base/colors';
+// 1. -----------   GENERAL MIXINS   ---------------
+// =================================================
+//A. EXTENDS
+// ==========
+// list reset
+// * use * - @extend %listreset;
+%listreset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// clearfix
+// * use * - @extend %clearfix;
+%clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat 0 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+//box shadow
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+      box-shadow: $shadow;
+}
+
+//transition
+@mixin transition($property...) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+//transform origin
+// * use * - @include transform(100% 0);
+@mixin transform ($origin) {
+  -webkit-transform: $origin;
+  -moz-transform: $origin;
+  -ms-transform: $origin;
+  -o-transform: $origin;
+  transform: $origin;
+}
+
+//breakpoint min
+@mixin breakpoint-min($width){
+  @media only screen and (min-width: #{$width}){
+   @content;
+  }
+}
+
+//breakpoint max
+@mixin breakpoint-max($width){
+  @media only screen and (max-width: #{$width}){
+   @content;
+  }
+}
+
+
+// typography mixins
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: $fs-font-size;
+  }
+}
+
+
+// mixin for font face
+// * use * - @include font-face (icomoon, icomoon, normal, normal, '../fonts/icomoon/');
+@mixin font-face ($family, $name, $weight: normal, $style: normal, $url: '../fonts/') {
+  @font-face {
+    font-family: '#{$family}';
+    src: url($url + $name + '.eot');
+    src: url($url + $name + '.eot?#iefix'),
+       url($url + $name + '.woff2') format('woff2'),
+       url($url + $name + '.woff') format('woff'),
+       url($url + $name + '.ttf') format('ttf'),
+       url($url + $name + '.svg') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+// * use * - @include font-face (icomoon, icomoon, normal, normal, '../fonts/icomoon/');
+@mixin font-face-icomoon ($family, $name, $weight: normal, $style: normal, $url: '../fonts/') {
+  @font-face {
+    font-family: '#{$family}';
+    src: url($url + $name + '.eot');
+    src: url($url + $name + '.eot?#iefix'),
+       url($url + $name + '.woff') format('woff'),
+       url($url + $name + '.ttf') format('ttf'),
+       url($url + $name + '.svg') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+// Align block inside parent with fixed height
+// * use * - @include v-align; or @include v-align(250px); or @include v-align(250px, bottom, before);
+@mixin v-align($va-height: 100%, $va-direction: middle, $va-pseudo: after) {
+  white-space: nowrap;
+  text-align: center;
+
+  &:#{$va-pseudo} {
+    content: '';
+    display: inline-block;
+    vertical-align: $va-direction;
+    width: 0;
+    min-height: $va-height;
+  }
+
+  > * {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: $va-direction;
+    max-width: 99%;
+  }
+}
+
+// vertical align a pair of child inside parent
+// * use * - @include v-align-pair(image, text) or @include v-align-pair(image, text, bottom) or @include v-align-pair(image, text, middle, 200px);
+@mixin v-align-pair($child-name1, $child-name2, $valign: middle, $width1: auto, $width2: auto ) {
+  display: table;
+
+  .#{$child-name1}{
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width1;
+  }
+
+  .#{$child-name2} {
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width2;
+  }
+}
+
+// vertical align el
+// * use * - @include vertical-align-el;
+@mixin vertical-align-el {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/// Mixin helping defining both `width` and `height` simultaneously.
+// * use * - @include size(10em) or @include size(100%, 10em);
+@mixin same-size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// font-smothing
+// * use * - @include font-smoothing(on) or @include font-smoothing(off);
+@mixin font-smoothing($value:on){
+  @if $value == on{
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  @else{
+    -webkit-font-smoothing:subpixel-antialiased;
+    -moz-osx-font-smoothing:auto;
+  }
+}
+
+// Hides the text in an element, commonly used to show background image insted of text. Some elements will need block-level styles applied.
+// @link http://zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement
+// * use * - @include hide-text;
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+// Creates a visual triangle with border
+// @author http://bourbon.io/docs/#triangle
+// $direction: up, down, left, right, up-right, up-left, down-right, down-left
+// * use * -  @include triangle(12px, gray, down) or @include triangle(12px 6px, gray blue, up-left);
+@mixin triangle($size, $color, $direction) {
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+  $foreground-color: nth($color, 1);
+  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    $width: $width / 2;
+    $height: if(length($size) > 1, $height, $height/2);
+
+    @if $direction == up {
+      border-bottom: $height solid $foreground-color;
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+    } @else if $direction == right {
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+    } @else if $direction == left {
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+      border-top: $width solid $background-color;
+    }
+  } @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == up-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      border-left:  $width solid $background-color;
+    } @else if $direction == down-left {
+      border-right: $width solid $background-color;
+    }
+  } @else if ($direction == inset-up) {
+    border-color: $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-down) {
+    border-color: $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $height $width;
+  } @else if ($direction == inset-right) {
+    border-color: $background-color $background-color $background-color $foreground-color;
+    border-style: solid;
+    border-width: $width $height;
+  } @else if ($direction == inset-left) {
+    border-color: $background-color $foreground-color $background-color $background-color;
+    border-style: solid;
+    border-width: $width $height;
+  }
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+
+/// Animate css properties
+// * use * -  @include animate(color) or @include animate(color width) or @include animate(color width, 1s, linear);
+$animation-speed: .3s !default;
+
+@mixin animate($properties, $duration: $animation-speed, $easing: ease-in-out) {
+  $list:();
+  @each $prop in $properties {
+    $str: #{$prop} #{$animation-speed} #{$easing};
+    $list: join($list, $str, comma);
+  }
+  transition: $list;
+}
+
+// image hover scale effect
+@mixin img-hover {
+  overflow: hidden;
+  img {
+    transition: transform 0.3s linear;
+  }
+  &:hover {
+    img {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+    }
+  }
+}
+
+// placeholder mixin for form placeholders
+// * use * - @include placeholder{color: #000;}
+@mixin placeholder {
+    ::-webkit-input-placeholder { @content }
+    :-moz-placeholder           { @content }
+    ::-moz-placeholder          { @content }
+    :-ms-input-placeholder      { @content }
+}
+
+@mixin icomoon-css-content {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

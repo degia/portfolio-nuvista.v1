@@ -1,0 +1,115 @@
+/******* date time picker styles *******/
+
+// Date time Picker styles
+.waituk_datetimepicker-block {
+    .datepicker-inline {
+        width: 240px;
+        margin: 0 auto;
+    }
+    .input-group-addon {
+        padding: 0 0 0 3px;
+        line-height: 1.25;
+        color: $date-calendar-icon-color;
+        background-color: $date-calendar-icon-bg-color;
+        border: none;
+        width: 40px;
+    }
+}
+
+.datepicker {
+    border-color: transparent;
+    box-shadow: 0 10px 20px 0 rgba(36, 83, 107, 0.15);
+    border-radius: 0;
+    &.datepicker-dropdown.datepicker-orient-top {
+        &:before {
+            border: none;
+        }
+    }
+    &.datepicker-dropdown.datepicker-orient-bottom {
+        &:before {
+            border: none;
+        }
+    }
+    td,
+    th {
+        border-radius: 0;
+        font-size: 0.75rem;
+    }
+    .datepicker-switch:hover,
+    .prev:hover,
+    .next:hover,
+    tfoot tr th:hover,
+    table tr td.day:hover,
+    table tr td.day.focused {
+        background: $date-calendar-hover-bg-color;
+        color: $date-calendar-hover-color;
+    }
+    table tr td.active,
+    table tr td.active:hover,
+    table tr td.active.disabled,
+    table tr td.active.disabled:hover,
+    table tr td.active:hover,
+    table tr td.active:hover:hover,
+    table tr td.active.disabled:hover,
+    table tr td.active.disabled:hover:hover,
+    table tr td.active:active,
+    table tr td.active:hover:active,
+    table tr td.active.disabled:active,
+    table tr td.active.disabled:hover:active,
+    table tr td.active.active,
+    table tr td.active:hover.active,
+    table tr td.active.disabled.active,
+    table tr td.active.disabled:hover.active,
+    table tr td.active.disabled,
+    table tr td.active:hover.disabled,
+    table tr td.active.disabled.disabled,
+    table tr td.active.disabled:hover.disabled,
+    table tr td.active[disabled],
+    table tr td.active:hover[disabled],
+    table tr td.active.disabled[disabled],
+    table tr td.active.disabled:hover[disabled],
+    table tr td.today,
+    table tr td.today:hover,
+    table tr td.today.disabled,
+    table tr td.today.disabled:hover,
+    table tr td.today:hover,
+    table tr td.today:hover:hover,
+    table tr td.today.disabled:hover,
+    table tr td.today.disabled:hover:hover,
+    table tr td.today:active,
+    table tr td.today:hover:active,
+    table tr td.today.disabled:active,
+    table tr td.today.disabled:hover:active,
+    table tr td.today.active,
+    table tr td.today:hover.active,
+    table tr td.today.disabled.active,
+    table tr td.today.disabled:hover.active,
+    table tr td.today.disabled,
+    table tr td.today:hover.disabled,
+    table tr td.today.disabled.disabled,
+    table tr td.today.disabled:hover.disabled,
+    table tr td.today[disabled],
+    table tr td.today:hover[disabled],
+    table tr td.today.disabled[disabled],
+    table tr td.today.disabled:hover[disabled] {
+        background: $date-calendar-active-bg-color;
+        background-image: none;
+        color: $date-calendar-active-color;
+    }
+    table tr td.selected,
+    table tr td.selected:hover,
+    table tr td.selected.disabled,
+    table tr td.selected.disabled:hover {
+        background: $date-calendar-selected-bg-color;
+        color: $date-calendar-selected-color;
+        background-image: none;
+    }
+    .table-condensed>tbody>tr>td,
+    .table-condensed>tbody>tr>th,
+    .table-condensed>tfoot>tr>td,
+    .table-condensed>tfoot>tr>th,
+    .table-condensed>thead>tr>td,
+    .table-condensed>thead>tr>th {
+        padding: 2px 7px;
+    }
+}

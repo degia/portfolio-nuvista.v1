@@ -1,0 +1,155 @@
+/******* portfolio styles *******/
+
+// picture styles
+.picture-item {
+    margin-top: $global-space;
+    margin-bottom: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        background: $picture-item-before-bg-color;
+        transition: all linear .3s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:hover {
+        &:before {
+            opacity: 0.5;
+            visibility: visible;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    figcaption,
+    .figcaption {
+        color: $picture-item-figcaption-color;
+        background: $picture-item-figcaption-bg-color;
+        padding: 2.3rem 1.5rem 2rem 7rem;
+        text-transform: uppercase;
+        @include box-shadow(0px 2px 9px 0px rgba(1, 2, 2, 0.1));
+        .content-title {
+            color: $picture-item-figcaption-color;
+        }
+        .sub {
+            color: $picture-item-figcaption-color;
+        }
+    }
+    .link-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(5rem + 0.3571rem);
+        text-align: center;
+        border-right: .07143rem solid $picture-item-link-box-bg-color;
+        a {
+            display: block;
+            height: 50%;
+            color: $picture-item-link-color;
+            font-size: 1.3rem;
+            line-height: calc(3rem + 1rem);
+            &:first-child {
+                border-bottom: .07143rem solid $picture-item-link-box-bg-color;
+            }
+            &:hover {
+                background: $picture-item-link-box-bg-color;
+                color: $picture-item-link-hover-color;
+            }
+        }
+    }
+    .info {
+        text-align: right;
+    }
+    @include breakpoint-min ($screen-medium) {
+        margin-top: #{$global-space * 2};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-top: #{$global-space * 3};
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        margin-top: #{$global-space * 3};
+    }
+}
+
+.port-v2 {
+    figcaption {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+        width: 100%;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+        opacity: 0;
+        .link-box {
+            position: relative;
+            width: 100%;
+            border-right: none;
+            a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                border-radius: 3%; // change to 50% for circular link background.
+                background: $picture-item-link-box-bg-color;
+                line-height: 48px;
+                margin: 0 5px 0;
+                transform: translateY(-20px);
+                &:first-child {
+                    border: none;
+                }
+            }
+        }
+    }
+    &.shine-effect {
+        &:before {
+            left: 100px;
+        }
+        &:hover:before {
+            left: -100px;
+        }
+    }
+    &:hover {
+        figcaption {
+            opacity: 1;
+            .link-box {
+                a {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+
+// info list styles
+.info-list {
+    font-size: .9rem;
+    [class^="custom-"] {
+        position: absolute;
+            top: 0.4rem;
+        left: 0.9375rem;
+        color: $info-list-color;
+        @include font-size($normal-font-sizes);
+    }
+    .text {
+        margin-left: 2rem;
+        display: block;
+        color: $info-list-text-color;
+        font-weight: $bold-font-weight;
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        .text {
+            margin-left: 5rem;
+        }
+    }
+    li{
+        margin-bottom: 1rem;
+        p{
+            margin: 0;
+            font-weight:$regular-font-weight;
+        }
+    }
+}
+

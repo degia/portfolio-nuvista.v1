@@ -1,0 +1,54 @@
+/******* breadcrumb styles *******/
+
+// breadcrumb styles
+.breadcrumb-block {
+    .breadcrumb {
+        padding: 0;
+        margin-bottom: 0;
+        background: none;
+        border-radius: 0;
+        color: $breadcrumb-color;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        @include breakpoint-min ($screen-medium) {
+            font-size: 0.875rem;
+        }
+        .breadcrumb-item {
+            float: none;
+            display: inline-block;
+            a {
+                color: $breadcrumb-link-color;
+                &:hover {
+                    color: $breadcrumb-link-hover-color;
+                }
+            }
+            &.active {
+                color: $breadcrumb-active-color;
+            }
+            & + .breadcrumb-item:before {
+                color: $breadcrumb-before-color;
+                padding: 0 0.2rem;
+            }
+        }
+    }
+}
+
+.visual-no-bg {
+    .breadcrumb {
+        .breadcrumb-item {
+            color: $breadcrumb-dark-color;
+            &.active {
+                color: $breadcrumb-dark-active-color;
+            }
+            & + .breadcrumb-item:before {
+                color: $breadcrumb-dark-before-color;
+            }
+            a {
+                color: $breadcrumb-dark-link-color;
+                &:hover {
+                    color: $breadcrumb-dark-link-hover-color;
+                }
+            }
+        }
+    }
+}

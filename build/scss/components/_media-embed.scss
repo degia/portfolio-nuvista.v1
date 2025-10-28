@@ -1,0 +1,12 @@
+/******* media embed styles *******/
+
+// select boxes styles
+.media-block {
+    border-radius: 4px;
+    background: $media-embed-bg-color;
+    padding: 0.625rem;
+    transition: all linear .3s;
+    &:hover {
+        background: $media-embed-hover-bg-color;
+    }
+}

@@ -1,0 +1,33 @@
+/******* contact form styles *******/
+
+// contact form styles
+.waituk_contact-form {
+    margin-bottom: #{$global-space * 2};
+    .form-control {
+        font: 0.875rem/1 $font-family-base;
+        letter-spacing: 0;
+        font-weight: $medium-font-weight;
+    }
+    .form-group {
+        margin-bottom: #{$global-space * 3};
+    }
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: 0;
+        .form-group {
+            margin-bottom: #{$global-space * 3};
+        }
+    }
+    @include breakpoint-min ($screen-large) {
+        .form-group {
+            margin-bottom: #{$global-space * 3};
+        }
+    }
+    @include placeholder {
+        color: $form-fields-placeholder-color;
+    }
+}
+
+// contact confirmation styles
+.contact-confirmation {
+    margin-top: 0.7143rem;
+}

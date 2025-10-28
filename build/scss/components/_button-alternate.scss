@@ -1,0 +1,157 @@
+/******* button styles *******/
+
+// button styles
+.btn-alternate {
+    &.btn {
+        position: relative;
+        padding: 0.9375rem;
+        letter-spacing: 0.1429rem;
+        text-transform: uppercase;
+        border: 0.1429rem solid $primary-color;
+        border: none;
+        color: $white;
+        min-width: 15.63rem;
+        outline: none;
+        font-weight: $regular-font-weight;
+        cursor: pointer;
+        transition: all linear .3s;
+        @include font-size ($normal-font-sizes);
+        // primary button
+        &.btn-primary {
+            background: $btn-primary-bg;
+            border-color: $btn-primary-bg;
+            color: $white;
+            &:hover {
+                background: darken($btn-primary-bg, 10);
+                border-color: darken($btn-primary-bg, 10);
+            }
+        }
+        // secondary button
+        &.btn-secondary {
+            background: $secondary-color;
+            color: $white;
+            border: 0.1429rem solid $secondary-color;
+            &:hover {
+                background: darken($secondary-color, 10);
+                color: $white;
+                border-color: darken($secondary-color, 10);
+            }
+        }
+        // gray border with transparent background
+        &.btn-trans-gray {
+            border: 0.1429rem solid $light-grey;
+            color: $light-grey;
+            &:hover {
+                background: $light-grey;
+                color: $white;
+            }
+        }
+        // dark gray border with transparent background
+        &.btn-trans-dark-gray {
+            border: 0.1429rem solid $light-black;
+            background: none;
+            &:hover {
+                background: $light-black;
+            }
+        }
+        // black button
+        &.btn-black {
+            background: $black;
+            border: 0.1429rem solid $black;
+            color: $white;
+            &:hover {
+                background: none;
+                color: $white;
+            }
+        }
+        @include breakpoint-min ($screen-large) {
+            min-width: 16.9rem;
+        }
+        &:focus {
+            outline: none;
+        }
+        // button with arrow
+        &.btn-arrow {
+            box-shadow: none;
+            padding-right: 2rem;
+            padding-left: 1rem;
+            &:after {
+                @include icomoon-css-content;
+                content: "\e914";
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translate(0, -50%);
+                font-size: 1.857rem;
+            }
+        }
+        // border with transparent background
+        &.btn-trans-primary {
+            border: 0.1429rem solid $secondary-color;
+            color: $light-black;
+            &:hover {
+                background: $secondary-color;
+                color: $white;
+            }
+        }
+        // border with transparent background
+        &.btn-trans-secondary {
+            border: 0.1429rem solid $secondary-color;
+            color: $light-black;
+            &:hover {
+                background: $secondary-color;
+                color: $white;
+            }
+        }
+        // white border with transparent background
+        &.btn-trans-white {
+            border: 0.1429rem solid $white;
+            color: $white;
+            &:hover {
+                background: $white;
+                color: $light-black;
+            }
+        }
+        // button white
+        &.btn-white {
+            border: 0.1429rem solid $white;
+            color: $light-black;
+            background: $white;
+            &:hover {
+                background: none;
+                color: $white;
+            }
+        }
+        // facebook button
+        &.btn-solid-facebook {
+            background: $c-facebook;
+            color: $white;
+            border: 0.1429rem solid transparent;
+            &:hover {
+                color: $c-facebook;
+                border-color: $c-facebook;
+                background: none;
+            }
+        }
+        // google plus button
+        &.btn-solid-google {
+            background: $c-google;
+            color: $white;
+            border: 0.1429rem solid transparent;
+            &:hover {
+                color: $c-google;
+                border-color: $c-google;
+                background: none;
+            }
+        }
+        // button small font
+        &.btn-small-font {
+            font-size: 0.875rem;
+            font-weight: $bold-font-weight;
+            font-family: $font-family-base;
+        }
+        &.has-shadow {
+            text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+}

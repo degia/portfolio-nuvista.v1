@@ -1,0 +1,118 @@
+// divider border
+.divider-border {
+    border-top: 0.0625rem $divider-border-color solid;
+    margin: 2rem 0;
+}
+
+.divider-border-dark {
+    border-top: 0.0625rem $divider-border-dark-color solid;
+    margin: 2rem 0;   
+}
+
+// divider-double-divider
+.divider-double-border {
+    border-top: 4px $divider-border-color double;
+    margin: 2rem 0;
+}
+
+// dotted divider
+.dotted-border {
+    border-top: 0.125rem $divider-border-color dashed;
+    margin: 2rem 0;
+}
+
+// divider v2
+.divider-v2 {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    margin: 0 0 1.875rem;
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        border-top: 3px $divider-border-color solid;
+    }
+    &:before {
+        width: 100%;
+        top: 0.3125rem;
+    }
+}
+
+// icon divider
+.icon-border {
+    position: relative;
+    text-align: left;
+    color: $divider-icon-color;
+    span {
+        font-size: 1.5rem;
+        @include breakpoint-min ($screen-medium) {
+            font-size: 2rem;
+        }
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 3.125rem;
+        right: 0;
+        content: '';
+        border-top: 0.0625rem $divider-border-color solid;
+        margin-top: -0.0625rem;
+    }
+}
+
+// right icon divider
+.icon-border-right {
+    position: relative;
+    text-align: right;
+    color: $divider-icon-color;
+    span {
+        font-size: 1.5rem;
+        @include breakpoint-min ($screen-medium) {
+            font-size: 2rem;
+        }
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        right: 3.125rem;
+        left: 0;
+        content: '';
+        border-top: 0.0625rem $divider-border-color solid;
+        margin-top: -0.0625rem;
+    }
+}
+
+// right icon divider
+.mid-icon-border {
+    position: relative;
+    text-align: center;
+    color: $divider-icon-color;
+    span {
+        font-size: 1.5rem;
+        @include breakpoint-min ($screen-medium) {
+            font-size: 2rem;
+        }
+    }
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        content: '';
+        width: 45%;
+        border-top: 0.0625rem $divider-border-color solid;
+        margin-top: -0.0625rem;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        content: '';
+        width: 45%;
+        border-top: 0.0625rem $divider-border-color solid;
+        margin-top: -0.0625rem;
+    }
+}

@@ -1,0 +1,59 @@
+/******* caption hover full styles *******/
+
+// caption hover full styles
+.caption-hover-full {
+    position: relative;
+    figcaption,
+    .figcaption {
+        @include v-align;
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        top: 1rem;
+        bottom: 1rem;
+        color: lighten($caption-hover-full-color, 10);
+        background: $caption-figcaption-bg-color;
+        transform: scale(0);
+        transition: all linear .3s;
+    }
+    .trigger {
+        position: absolute;
+        top: 0.625rem;
+        right: 0.625rem;
+        color: $caption-trigger-color;
+        font-size: 1.5rem;
+        @include breakpoint-max ($screen-wide) {
+            font-size: 1rem;
+        }
+    }
+    .content-title {
+        text-transform: capitalize;
+        font-family: $headings-font-family;
+        font-weight: $bold-font-weight;
+        color: lighten($caption-content-title-color, 10);
+        position: relative;
+        @include font-size($heading-s-sizes);
+        @include breakpoint-max ($screen-wide) {
+            letter-spacing: 0;
+            font-size: 1rem;
+        }
+        &:after {
+            content: '';
+            background: $caption-content-title-after-bg-color;
+            width: 2rem;
+            height: 0.2rem;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 0);
+            position: absolute;
+            margin-top: 0.7143rem;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        figcaption,
+        .figcaption {
+            transform: scale(1);
+        }
+    }
+}

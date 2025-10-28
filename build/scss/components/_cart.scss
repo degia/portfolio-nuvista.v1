@@ -1,0 +1,182 @@
+/******* cart styles *******/
+
+//cart styles
+.mega-menus {
+    .mega-menu-multiple {
+        .cart-list {
+            margin-right: 0;
+            @include breakpoint-min ($screen-large) {
+                margin-right: 2rem;
+            }
+            .s-list {
+                .row {
+                    margin: 0.9375rem -0.625rem;
+                    [class*="col-"] {
+                        padding: 0 0.625rem;
+                    }
+                }
+            }
+            .dropdown-menu-container {
+                > .dropdown-menu {
+                    padding: 1rem;
+                    right: 0;
+                    div > * {
+                        color: $dropdown-link-color;
+                    }
+                    h2 {
+                        display: block;
+                        padding: .3rem 0 0;
+                        font-size: 0.9rem;
+                        color: $dropdown-link-color;
+                        font-family: $font-family-base;
+                        font-weight: $bold-font-weight;
+                    }
+                    h4 {
+                        color: $dropdown-link-color;
+                        font-size: 0.75rem;
+                        font-family: $font-family-base;
+                        text-transform: capitalize;
+                        font-weight: $bold-font-weight;
+                        line-height: 0.5;
+                        margin: 0.625rem 0 1.875rem;
+                    }
+                    h6 {
+                        color: $dropdown-link-color;
+                        font-size: 0.75rem;
+                        font-family: $font-family-base;
+                        text-transform: capitalize;
+                        font-weight: $regular-font-weight;
+                        line-height: 1;
+                        margin: 0;
+                        @include breakpoint-max ($screen-large) {
+                            margin: 0;
+                        }
+                        strong,
+                        a {
+                            font-weight: $regular-font-weight;
+                            font-size: 0.6875rem;
+                            margin: 0 0 0.5rem;
+                            display: inline-block;
+                            transition: all linear .2s;
+                            text-transform: uppercase;
+                            color: $dropdown-link-color;
+                            &:hover {
+                                color: $dropdown-link-hover-color;
+                                background: none;
+                            }
+                            @include breakpoint-max ($screen-large) {
+                                margin: 0 0 0.625rem;
+                                padding-right: 2rem;
+                            }
+                        }
+                    }
+                    .text-muted {
+                        color: $dropdown-link-color !important;
+                        font-size: 0.625rem;
+                        font-weight: $bold-font-weight;
+                        @include breakpoint-max ($screen-large) {
+                            margin: -1.3rem 0 0;
+                        }
+                    }
+                    .btn {
+                        padding: 0.6rem !important;
+                        display: block;
+                        line-height: 1;
+                        min-width: 100%;
+                        font-size: 0.875rem;
+                        color: $cart-button-color;
+                        background: $cart-button-bg-color;
+                        border-color: $cart-button-border-color;
+                        &:hover,
+                        &:focus {
+                            outline: none;
+                            background: $cart-button-hover-bg-color;
+                            border-color: $cart-button-border-hover-color;
+                            box-shadow: none;
+                            color: $cart-button-color;
+                        }
+                    }
+                    li {
+                        padding: 0;
+                        border: none;
+                        &:hover {
+                            background: inherit;
+                        }
+                    }
+                }
+                a {
+                    color: $dropdown-link-color;
+                    padding: 0 !important;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+
+
+/***********************  white header ***********************/
+
+.header-white {
+    .mega-menus {
+        .mega-menu-multiple {
+            .cart-list {
+                .dropdown-menu-container {
+                    > .dropdown-menu {
+                        h2 {
+                            color: $white-main-nav-link-color;
+                        }
+                        h4 {
+                            color: $white-main-nav-link-color;
+                        }
+                        h6 {
+                            color: $white-main-nav-link-color;
+                            strong,
+                            a {
+                                color: $white-main-nav-link-color;
+                                &:hover {
+                                    color: $white-dropdown-link-hover-color;
+                                }
+                            }
+                        }
+                        li {
+                            &:hover {
+                                background: inherit;
+                            }
+                        }
+                        a {
+                            &:hover {
+                                background: none;
+                            }
+                        }
+                        .text-muted {
+                            color: $white-main-nav-link-color !important;
+                        }
+                        .btn {
+                            color: $cart-button-color;
+                            border-color: $cart-button-border-color;
+                            &:hover,
+                            &:focus {
+                                background: $cart-button-hover-bg-color;
+                                border-color: $cart-button-border-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/***********************  header logo center ***********************/
+
+.header-logo-center {
+    .mega-menus {
+        .mega-menu-multiple {
+            .cart-list {
+                margin-right: 0;
+            }
+        }
+    }
+}

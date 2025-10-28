@@ -1,0 +1,17 @@
+/******* grid box styles *******/
+
+// grid box styles
+.grid-box {
+    .grid-box-demo {
+        background-color: $grid-box-bg-color;
+        display: block;
+        min-height: 3.375rem;
+        line-height: 3.375rem;
+        text-align: center;
+        font-size: 0.75rem;
+        color: $grid-box-color;
+    }
+    .row {
+        padding-bottom: 2.5rem;
+    }
+}

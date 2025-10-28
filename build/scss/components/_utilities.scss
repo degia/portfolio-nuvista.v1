@@ -1,0 +1,377 @@
+/******* utilities *******/
+
+// Utilities
+// overlay
+.has-overlay {
+    position: relative;
+    z-index: 999;
+    &:before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba($has-overlay-before-bg-color, .8);
+        content: '';
+        position: absolute;
+    }
+}
+
+// background stretch
+.bg-stretch {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    img {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+.less-wide {
+    max-width: 53.75rem;
+    margin: 0 auto;
+}
+
+// lighten overlay
+.lighten-overlay {
+    @extend .black-overlay-3;
+}
+
+.lighten-m-overlay {
+    @extend .black-overlay-6;
+}
+
+// overlay variation (.1 - .9)
+.black-overlay-1 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .1);
+    }
+}
+
+.black-overlay-2 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .2);
+    }
+}
+
+.black-overlay-3 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .3);
+    }
+}
+
+.black-overlay-4 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .4);
+    }
+}
+
+.black-overlay-5 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .5);
+    }
+}
+
+.black-overlay-6 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .6);
+    }
+}
+
+.black-overlay-7 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .7);
+    }
+}
+
+.black-overlay-8 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .8);
+    }
+}
+
+.black-overlay-9 {
+    &:before {
+        background: rgba($has-overlay-before-bg-color, .9);
+    }
+}
+
+// dark overlay
+.dark-overlay {
+    @extend .black-overlay-5;
+}
+
+// overlay styles
+.overlay {
+    @extend .has-overlay;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all linear .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999999999;
+}
+
+// vertical align center (to add this class on parent)
+.v-align-row {
+    align-items: center;
+}
+
+// light gray background
+.bg-gray-light {
+    background: $off-white-bg-color;
+}
+
+// white background
+.bg-white {
+    background-color: $white;
+}
+
+// black background
+.bg-black {
+    background-color: $black;
+}
+
+// border style
+.bordered {
+    border: 0.7143rem solid transparent;
+}
+
+// border with white color
+.white-border {
+    border-color: $white;
+}
+
+
+// gray background
+.bg-gray-dark {
+    background: darken($dark-gray-bg-color, 16.3);
+}
+
+// primary background of theme
+.bg-primary {
+    background-color: $primary-color !important; // to overwrite bootstrap utilities
+}
+
+// secondary background of theme
+.bg-secondary {
+    background-color: $secondary-color !important; // to overwrite bootstrap utilities
+}
+
+// dark background
+.bg-darker {
+    background: $darker-bg-color;
+}
+
+// dark gray background
+.bg-dark {
+    background: $light-gray-bg-color;
+}
+
+// gray transparent
+.gray-transparent {
+    background: rgba($light-grey, .1);
+}
+
+// no overlay
+.no-overlay {
+    &:after,
+    &:before {
+        background: none;
+    }
+}
+
+// white foreground color
+.text-white {
+    color: $white !important;
+}
+
+// white foreground color
+.text-black {
+    color: $black !important;
+}
+
+// primary foreground color
+.text-primary {
+    color: $primary-color !important;
+}
+
+// secondary foreground color
+.text-secondary {
+    color: $secondary-color !important;
+}
+
+// bottom margin big
+.bottom-space {
+    margin-bottom: $global-space * 4;
+    @include breakpoint-min ($screen-extra-large) {
+        margin-bottom: $global-space * 7;
+    }
+}
+
+// bottom margin small
+.bottom-s-space {
+    margin-bottom: $global-space * 2;
+}
+
+// bottom margin medium
+.bottom-m-space {
+    margin-bottom: $global-space * 4;
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: $global-space * 6;
+    }
+}
+
+// top margin extra-large
+.top-xl-space {
+    margin-top: $global-space * 5;
+    @include breakpoint-min ($screen-extra-large) {
+        margin-top: $global-space * 18;
+    }
+}
+
+// top margin medium-100
+.top-m1-space {
+    margin-top: $global-space * 4;
+    @include breakpoint-min ($screen-medium) {
+        margin-top: $global-space * 9;
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-top: $global-space * 10;
+    }
+}
+
+// top margin large
+.top-l-space {
+    margin-top: #{$global-space * 6};
+    @include breakpoint-min ($screen-medium) {
+        margin-top: #{$global-space * 8};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-top: #{$global-space * 10};
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        margin-top: #{$global-space * 12};
+    }
+}
+
+// top margin big
+.top-space {
+    margin-top: $global-space * 4.5;
+    @include breakpoint-min ($screen-medium) {
+        margin-top: $global-space * 6;
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-top: $global-space * 9;
+    }
+}
+
+// top margin small
+.top-s-space {
+    margin-top: $global-space * 2;
+}
+
+// spacing on medium screen only
+.top-space-medium-only {
+    margin-top: $global-space * 3;
+    @include breakpoint-min ($screen-medium) {
+        margin-top: 0;
+    }
+}
+
+// vertical space
+.v-space {
+    padding: $global-space * 4 0;
+    @include breakpoint-min ($screen-medium) {
+        padding: $global-space * 6 0;
+    }
+    @include breakpoint-min ($screen-large) {
+        padding: $global-space * 8 0;
+    }
+}
+
+// top margin medium
+.top-m-space {
+    margin-top: $global-space * 4;
+    @include breakpoint-min ($screen-large) {
+        margin-top: $global-space * 6;
+    }
+}
+
+// spacing on small screen only
+.bottom-space-small-only {
+    margin-bottom: $global-space * 3;
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: 0;
+    }
+}
+
+// spacing on medium screen only
+.bottom-space-medium-only {
+    margin-bottom: $global-space * 3;
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: 0;
+    }
+}
+
+// block right
+.block-right {
+    margin-left: auto;
+}
+
+// border radius small
+.has-radius-small {
+    border-radius: 0.25rem;
+}
+
+// border radius medium
+.has-radius-medium {
+    border-radius: 0.5rem;
+}
+
+// border radius
+.has-radius {
+    border-radius: 1rem;
+}
+
+// border radius big
+.has-radius-large {
+    border-radius: 2rem;
+}
+
+// border radius huge
+.has-radius-huge {
+    border-radius: 5.429rem;
+}
+
+// box shadow
+.has-shadow {
+    box-shadow: 0 2px 1px 0 rgba($black, .3);
+}
+
+// transparent
+.transparent {
+    background: transparent;
+}
+
+// Bordered Image
+.img-border {
+    border-radius: 0.5rem;
+    img {
+        border-radius: 0.5rem;
+    }
+}
+
+// circular images
+.circular-img {
+    border-radius: 50%;
+    img {
+        border-radius: 50%;
+    }
+}

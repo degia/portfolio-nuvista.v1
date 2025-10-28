@@ -1,0 +1,64 @@
+/******* fancybox styles *******/
+
+// fancybox styles
+.fancybox-close {
+    background: $fancybox-close-bg-color;
+    top: 0;
+    right: 0;
+    color: $fancybox-close-color;
+    &:hover {
+        color: $fancybox-close-color;
+    }
+    &:before {
+        content: "\e916";
+        transform: rotate(135deg);
+        position: absolute;
+        font-family: icomoon;
+        font-size: 1.5rem;
+        left: 0.373rem;
+        top: -0.4429rem;
+    }
+}
+
+.fancybox-nav {
+    span {
+        background: $fancybox-nav-bg-color;
+        color: $fancybox-nav-color;
+        &:before {
+            content: "\e915";
+            position: absolute;
+            font-family: icomoon;
+            font-size: 1.5rem;
+            left: 0.8rem;
+            top: -0.5571rem;
+        }
+    }
+    &.fancybox-next {
+        span {
+            &:before {
+                content: "\e914";
+                left: 0.9rem;
+            }
+        }
+    }
+}
+
+.fancybox-overlay {
+    z-index: 9999999999;
+}
+
+#fancybox-thumbs {
+    z-index: 99999999999;
+}
+
+.lightbox-description {
+    display: none;
+}
+.fancy-pop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}

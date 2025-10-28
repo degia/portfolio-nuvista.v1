@@ -1,0 +1,56 @@
+/******* count block styles *******/
+
+// count block styles
+.count-block {
+    @extend .has-overlay;
+    color: $counter-block-color;
+    .container-fluid {
+        padding: 0;
+    }
+    .icon {
+        font-size: 3.125rem;
+    }
+    .number {
+        @include font-size($heading-m-sizes);
+        color: $counter-block-color;
+    }
+    .text {
+        @include font-size($normal-font-sizes);
+        color: $counter-block-text-color;
+    }
+    .col-wrap {
+        transition: all linear .3s;
+        margin-bottom: 0;
+        padding-top: #{$global-space * 4};
+        padding-bottom: #{$global-space * 4};
+        &:hover {
+            background: rgba($counter-hover-bg, 1);
+            color: $counter-block-hover-color;
+            .number {
+                color: $counter-block-hover-color;
+            }
+            .icon {
+                color: $counter-hover-color;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            padding-top: #{$global-space * 5};
+            padding-bottom: #{$global-space * 5};
+        }
+        @include breakpoint-min ($screen-large) {
+            padding-top: #{$global-space * 7};
+            padding-bottom: #{$global-space * 7};
+        }
+        @include breakpoint-min ($screen-extra-large) {
+            padding-top: #{$global-space * 9};
+            padding-bottom: #{$global-space * 9};
+        }
+    }
+    // Counter solid-block
+    &.solid-block {
+        background: $counter-solid-block-bg-color;
+        &:before {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/******* page banners styles *******/
+
+// page banners styles
+//slide bg
+.slide-bg {
+    position: relative;
+    margin-top: $small-header-height;
+    @include breakpoint-min ($screen-medium) {
+        margin-top: 0;
+    }
+}
+
+// video bg
+.video-bg {
+    position: relative;
+    &:before {
+        z-index: 99;
+    }
+    .centered-wrap {
+        padding-top: 45px;
+    }
+    .embed-responsive {
+        height: 100vh;
+        @include breakpoint-min ($screen-medium) {
+            min-height: 42.19rem;
+            max-height: 42.19rem;
+        }
+        video {
+            object-fit: cover;
+        }
+    }
+    @include breakpoint-min ($screen-small) {
+        .centered-wrap {
+            padding-top: 0;
+        }
+    }
+}
+
+//map bg
+.map-bg {
+    position: relative;
+}
+
+//colored-bg
+.colored-bg {
+    height: 100vh;
+    position: relative;
+    @include breakpoint-min ($screen-medium) {
+        min-height: 42.19rem;
+        max-height: 42.19rem;
+    }
+}
+
+//fullscreen bg
+.fullscreen-bg {
+    height: 100vh;
+    @include breakpoint-min ($screen-medium) {
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+}
+
+// stactic image background
+.image-bg {
+    background-attachment: initial;
+    background-size: cover;
+    overflow: hidden;
+}

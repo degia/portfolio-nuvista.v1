@@ -1,0 +1,14 @@
+/******* logo slide styles *******/
+
+// logo slide block styles
+.logo-container {
+    text-align: center;
+    .owl-carousel {
+        .owl-item {
+            float: none;
+            display: inline-block;
+            vertical-align: middle;
+            @extend .grayscale-effect;
+        }
+    }
+}

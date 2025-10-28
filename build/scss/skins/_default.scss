@@ -1,0 +1,532 @@
+@import "../base/colors";
+
+// Main Color Scheme
+$primary-color: 							   $dodger-blue;
+$secondary-color: 							   $orange;
+$light-grey:                                   $ghost;
+$dark-grey:                                    $scorpion;
+$light-black:                                  $abbey;
+$dark-black:                                   $mine-shaft-d;
+$off-white:                                    $off-white;
+
+// Preloader Color
+$preloader-background:                         $white;
+$preloader-icon-border-color:                  $primary-color;
+
+// anchor links
+$link-color: 									$primary-color;
+$link-hover-color: 								darken($link-color, 10);
+$link-hover-decoration:							none;
+
+// buttons
+
+$btn-color:                                     $white;
+
+// Button Primary Color
+$btn-primary-bg:								$primary-color;
+$btn-primary-border:							$primary-color;
+$btn-primary-hover-bg-color:					darken($btn-primary-bg, 10);
+$btn-primary-hover-border-color:				darken($btn-primary-bg, 10);
+
+// Button Secondary Color
+$btn-secondary-bg:								$secondary-color;
+$btn-secondary-border:							$secondary-color;
+$btn-secondary-hover-bg-color:					darken($btn-secondary-bg, 15);
+$btn-secondary-hover-border-color:              darken($btn-secondary-bg, 15);
+
+// Button Transparent Color
+$btn-trans-color:                               $light-black;
+$btn-trans-gray-color:                          $light-grey;
+$btn-trans-gray-border-color:                   $light-grey;
+$btn-trans-dark-gray-color:                     $dark-black;
+
+// Button Black Color
+$btn-black-hover-text-color:										$black;
+
+// header
+
+// Top Header Background Color
+$top-header-bg: 			        		     $white;
+$top-header-link-color: 					     lighten($dark-grey, 5);
+$top-header-link-hover-color: 				     $primary-color;
+
+// Bottom Header Background Color
+$bottom-header-bg: 			    			     $transparent;
+
+// Main Nav Link Color Dark Header: 
+$main-nav-link-color: 			    		     $white;
+$main-nav-link-hover-color: 				     $light-grey;
+
+// Main Nav Dropdown Color Dark
+$dropdown-bg: 			            		     $dark-black;
+$dropdown-box-shadow-color:                      lighten($black, 30);
+$dropdown-link-color: 	            		     lighten($dark-grey, 15);
+$dropdown-link-hover-color: 	    		     $white;
+$dropdown-link-hover-bg-color: 	    		     darken($dark-grey, 19);
+$dropdown-border-color:             		     darken($dark-grey, 19);
+
+// Mini Cart Color
+$cart-button-color:  						     $white;
+$cart-button-bg-color:  					     $primary-color;
+$cart-button-border-color:  					 $primary-color;
+$cart-button-hover-bg-color:  				     darken($btn-primary-bg, 10);
+$cart-button-border-hover-color:                 darken($btn-primary-bg, 10);
+
+// Top Search Color
+$top-search-bg-color: 							$black;
+$top-search-color: 								$white;
+
+// Sticky Bottom Header Background Color
+$sticky-bottom-header-bg: 			    	     $dark-black;
+
+// Mobile Main Header Background Color
+$mobile-header-bg:  						     $dark-black;
+
+
+// Mobile Main Nav Dropdown Color
+$mobile-dropdown-bg: 			                 darken($dark-grey, 15);
+$mobile-sub-dropdown-bg: 			             darken($dark-grey, 20);
+$mobile-dropdown-link-hover-bg-color: 	         darken($dark-grey, 19);
+$mobile-dropdown-border-color:             	     darken($dark-grey, 19);
+
+// White Top Header Background Color
+$white-top-header-link-color: 					 $white;
+$white-top-header-link-hover-color: 			 $primary-color;
+
+// White Bottom Header Background Color
+$white-bottom-header-bg: 			    	     $white;
+
+// White Main Nav Link Color
+$white-main-nav-link-color: 				     $light-black;
+$white-main-nav-link-hover-color: 			     $grey;
+
+// White Main Nav Dropdown
+$white-dropdown-bg: 			                 $white;
+$white-dropdown-box-shadow-color:                $black;
+$white-dropdown-link-color: 	                 lighten($dark-grey, 9);
+$white-dropdown-link-hover-color: 	             $light-black;
+$white-dropdown-link-hover-bg-color: 	         $off-white;
+$white-dropdown-border-color:                    $off-white;
+
+// White Top Search Color
+$white-top-search-bg-color: 				     $white;
+$white-top-search-color:    				     $light-grey;
+
+// Mobile White Mobile Main Nav Link Color
+$white-mobile-main-nav-link-hover-bg-color:      lighten($off-white, 1);
+$white-mobile-border-color: 				     darken($off-white, 1);
+
+// Mobile White Mobile Main Nav Dropdown
+$white-mobile-dropdown-bg: 			             $off-white;
+$white-mobile-sub-dropdown-bg: 			         darken($off-white, 5);
+
+// Icon Boxes Color
+$icon-box-before: 			                     $white;
+$icon-box-icon-color: 			                 $dark-grey;
+$icon-box-title-color: 			                 $light-black;
+$icon-box-link-color:			                 $light-black;
+$icon-box-link-hover-color:			             $primary-color;
+$icon-box-text-color:			                 $dark-grey;
+$link-more-color:                                $dark-black;
+$link-more-hover-color:                          $primary-color;
+$icon-box-alternate-title-color:                 $white;
+$icon-box-alternate-link-color:                  $white;
+
+// Block Titles Color
+$block-heading-color:							$light-black;
+$block-sub-heading-color:           			$light-black;
+$block-sub-heading-big-color:           		$light-black;
+$block-top-heading-color:           			$light-black;
+$block-heading-content-title-color:           	$light-black;
+$heading-span-color:           			        $primary-color;
+
+// Content Block Color
+$content-link-color:                            $primary-color;
+$content-link-hover-color:                      darken($link-color, 10);
+
+// Default Caption Hover Full Color
+$caption-color:            		                $light-black;
+$caption-hover-full-color:            		    $light-black;
+$caption-figcaption-bg-color:            		$white;
+$caption-content-title-color:            		$light-black;
+$caption-content-title-after-bg-color:          lighten($dark-grey, 50);
+$caption-trigger-color:            			    $primary-color;
+
+// Caption Slide Left Color
+$caption-slide-left-before-bg-color:            $light-black;
+
+// Portfolio Color
+$picture-item-figcaption-color:                 $white;
+$picture-item-figcaption-bg-color:              lighten($light-black,2);
+$picture-item-link-box-bg-color:                $primary-color;
+$picture-item-link-color:                       $white;
+$picture-item-link-hover-color:                 $white;
+$picture-item-before-bg-color:                  $black;
+$info-list-color:                               $light-black;
+$info-list-text-color:                          $light-black;
+
+
+// counter
+$counter-hover-bg:							   $primary-color;
+$counter-hover-color:						   $white;
+
+// team 
+$team-hover-bg:								   $primary-color;
+$team-hover-title-color:					   $white;
+$team-hover-subtitle-color:					   $white;
+
+// portfolio item title color 
+$portfolio-hover-title-color:				   $white;
+
+// Typography Color
+$body-color:                                   $light-black;
+$headings-color:                               $light-black;
+$headings-h2-color:                            $light-black;
+
+// Bordered Document Color
+$document-space-bg-color:                      $white;
+
+// Visual Color
+$visual-text-color:                            $white;
+$visual-title-color:                           $white;
+$visual-title-span-color:                      $primary-color;
+$visual-title-h4-color:                        $white;
+$visual-no-bg-title-color:                     $light-black;
+
+// Search Form Color
+$search-form-bg-color:                        lighten($black, 9);
+$search-close-color:                          $white;
+$search-fields-color:                         $white;
+$search-fields-placeholder-color:             $white;
+$search-fields-selection-color:               $off-white;
+$search-button-color:                         $white;
+
+// Content Block Color
+$content-title-color:                         $light-black;
+$content-sub-title-color:                     $dark-grey;
+$info-block-color:                            $white;
+$info-block-before-bg-color:                  $black;
+$info-block1-before-bg-color:                 $dark-grey;
+$info-block2-before-bg-color:                 $light-black;
+$info-block3-before-bg-color:                 $dark-grey;
+$info-block4-before-bg-color:                 $dark-grey;
+$content-slot-big-color:                      $light-black;
+$alternate-block-color:                       $light-black;
+$text-block-color:                            $light-black;
+$section-scroll-bg-color:                     $white;
+$section-scroll-color:                        $black;
+$circular-icon-color:                         $primary-color;
+$sidebar-border-color:                        lighten($light-grey, 15);
+$pre-bg-color:                                $off-white;
+$pre-border-color:                            lighten($light-grey, 15);
+$widget-block-color:                          $light-black;
+
+// Filter Nav Color
+$filter-nav-button-color:                     $light-black;
+$filter-nav-hover-color:					  $primary-color;
+$filter-nav-active-color:  					  $primary-color;
+
+// Hover Effects Color
+$image-zoom-2-bg-color:                       $black;
+$image-zoom-2-before-border-color:            $white;
+$border-hover-effect-border-color:            $white;
+$border-hover-effect-bg-color:                $black;
+$shine-effect-before-bg-color:                $white;
+$shine-effect-hover-bg-color:                 $black;
+$border-effect-2-bg-color:                    $black;
+$border-effect-2-after-border-color:          $white;
+$curtain-effect-bg-color:                     $black;
+$ripple-image-wrap-bg-color:                  $white;
+$c-ripple-bg-color:                           transparent;
+$c-ripple-circle-bg-color:                    $white;
+
+// Team Color
+$team-desc-color:                             $light-black;
+$team-desc-sub-color:                         $light-grey;
+$team-desc-sub-hover-color:                   $light-black;
+$team-desc-name-hover-color:                  $primary-color;
+
+// Owl Carousel
+$owl-nav-color:                               $light-grey;
+$owl-nav-hover-color:                         $dark-grey;
+$portfolio-slide-nav-color:                   $white;
+$portfolio-slide-nav-bg-color:                $light-black;
+
+// Counter Block
+$counter-block-color:                         $light-grey;
+$counter-block-hover-color:                   $white;
+$counter-block-text-color:                    $white;
+$counter-solid-block-bg-color:                $dark-black;
+
+// Testimonial
+$testimonial-title-color:                     $primary-color;
+$testimonial-designation-color:               $dark-grey;
+
+// Default Form Color - Contact Form
+$form-border-color:                             lighten($light-black, 60);
+$form-color:                                    $light-black;
+$form-fields-placeholder-color:                 lighten($light-black, 20);
+
+// Newsletter Form Color
+$newsletter-form-border-color:                  $light-black;
+$newsletter-button-color:                       $white;
+$newsletter-button-hover-color:                 $white;
+$newsletter-light-button-color:                 $light-black;
+$newsletter-light-button-hover-color:           darken($light-black, 35);
+
+// Post Color
+$post-link-color:                               $dark-grey;
+$post-link-hover-color:                         $dark-black;
+$post-text-block-bg-color:                      $white;
+$post-date-bg-color:                            $dark-black;
+$post-date-hover-bg-color:                      $black;
+$post-date-color:                               $white;
+$post-text-block-box-shadow-color:              $black;
+
+// Blog Color
+$blog-desc-border-color:                        $off-white;
+$blog-title-color:                              $light-black;
+$blog-title-hover-color:                        $primary-color;
+$blog-share-bg-color:                           $off-white;
+$blog-share-border-color:                       $off-white;
+$comment-title-color:                           $light-black;
+$comment-block-border-color:                    $off-white;
+$blog-lists-border-color:                       $off-white;
+$blog-list-items-link-color:                    $black;
+$blog-list-items-link-hover-color:              $primary-color;
+$related-posts-link-hover-color:                $primary-color;
+
+// Author Color
+$about-author-border-color:                     lighten($light-grey, 15);
+$about-author-title-color:                      $light-black;
+
+// Footer Color
+$footer-bg-image:                              url(../img/footer-pattern.jpg);
+$footer-bg-color:                              $black;
+$footer-main-color:                            lighten($dark-grey, 15);
+$footer-link-hover-color:                      $white;
+$footer-icon-color:                            $light-black;
+$footer-copyright-bg-color:                    $dark-black;
+$footer-title-color:                           $dark-grey;
+
+// Recent Post Color
+$recent-post-avatar-before-bg-color:           $black;
+$recent-post-desc-color:                       $light-black;
+$recent-post-title-color:                      $dark-black;
+$recent-post-link-color:                       $dark-black;
+$recent-post-link-hover-color:                 $primary-color;
+
+// Utilities Color
+$has-overlay-before-bg-color:                  $black;
+$off-white-bg-color:                           $off-white;
+$dark-gray-bg-color:                           $dark-grey;
+$darker-bg-color:                              $dark-black;
+$light-gray-bg-color:                          $light-grey;
+
+// Social Icons Color
+$social-icon-link-color:                       $light-black;
+$social-icon-bg-color:                         transparent;
+$social-icon-border-color:                     $light-black;
+$social-icon-link-hover-color:                 $primary-color;
+$social-icon-footer-link-hover-color:		   $light-grey;
+$social-icon-bg-hover-color:                   $off-white;
+$social-icon-border-hover-color:               $off-white;
+$social-icon-box-shadow-color:                 $black;
+$social-icon-link-color-with-brand-bg: 		   $white;
+
+// Breadcrumb Crumb Color
+$breadcrumb-color:                             $white;
+$breadcrumb-link-color:                        $white;
+$breadcrumb-before-color:                      $white;
+$breadcrumb-active-color:                      $white;
+$breadcrumb-link-hover-color:                  $light-grey;
+$breadcrumb-dark-color:                        $light-black;
+$breadcrumb-dark-link-color:                   $light-black;
+$breadcrumb-dark-before-color:                 $light-black;
+$breadcrumb-dark-active-color:                 $light-black;
+$breadcrumb-dark-link-hover-color:             $light-grey;
+
+// Fancybox Color
+$fancybox-close-bg-color:                      $light-black;
+$fancybox-close-color:                         $white;
+$fancybox-nav-bg-color:                        $light-black;
+$fancybox-nav-color:                           $white;
+
+// Contact Info Color
+$info-slot-color:                              $dark-grey;
+$contact-list-link-color:                      $dark-grey;
+$contact-list-link-hover-color:                $primary-color;
+
+// Tab Color
+$tab-nav-link-color:                           $light-black;
+$tab-nav-link-bg-color:                        $off-white;
+$tab-nav-link-hover-color:                     $white;
+$tab-nav-link-bg-hover-color:                  $primary-color;
+$tab-content-color:                            $dark-grey;
+$tab-nav-border-color:                         $light-grey;
+$tab-nav-link-before-color:                    $primary-color;
+$tab-nav-text-link-hover-color:                $primary-color;
+
+//Accordion Color
+$accordion-card-header-color:                  $white;
+$accordion-card-header-link-color:             $white;
+$accordion-card-header-bg-color:               $dark-black;
+$accordion-card-block-border-color:            $white;
+$accordion-card-block-color:                   $dark-grey;
+$accordion-panel-icon-link-color:              $dark-grey;
+
+
+// Pricing Block Color
+$pricing-block-h3-title:                       $light-black;
+$pricing-block-h4-title:                       $light-black;
+$pricing-block-border-color:                   lighten($light-grey, 12);
+$plan-features-border-color:                   $off-white;
+$plan-features-btn-holder-border-color:        $off-white;
+$pricing-block-alter-h4-title:                 $white;
+
+// Grid Box Color
+$grid-box-bg-color:                           $off-white;
+$grid-box-color:                              $black;
+
+// Data Table
+$table-border-color:                          lighten($light-grey, 15);
+$table-bg-color:                              $off-white;
+
+// Icon List Color
+$icon-list-color:                             $light-black;
+$icon-list-link-color:                        $light-black;
+$icon-list-link-hover-color:                  $primary-color;
+$icon-list-border-color:                      $light-black;
+$icon-list-background-color:                  $light-black;
+$icon-list-alter-color:                       $white;
+
+// Pagination Color
+$pagination-link-color:                       $primary-color;
+$pagination-border-color:                     lighten($light-grey, 15);
+$pagination-bg-hover-color:                   $primary-color;
+$pagination-link-hover-color:                 $white;
+$pagination-border-hover-color:               $primary-color;
+$pagination-solid-link-color:                 $light-black;
+$pagination-solid-bg-color:                   lighten($light-grey, 15);
+$pagination-disabled-bg-color:                lighten($light-grey, 15);
+$pagination-disabled-link-color:              $light-black;
+
+// Divider Color
+$divider-border-color:                        lighten($light-grey, 15);
+$divider-icon-color:                          $dark-grey;
+$divider-border-dark-color:					  $black;
+
+// Blockquotes Color
+$blockquote-color:                            $light-black;
+$blockquotes-border-color:                    $off-white;
+$blockquotes-hover-after-color:               darken($off-white, 20);
+$blockquotes-small-color:                     $light-grey;
+
+// Badge Color
+$badge-color:                                 $white;
+$badge-bg-color:                              $dark-black;
+$badge-btn-color:                             $dark-black;
+$badge-btn-bg-color:                          $white;
+
+// Date Time Picker
+$date-calendar-color:                         $light-black;
+$date-calendar-icon-color:                    $white;
+$date-calendar-icon-bg-color:                 $primary-color;
+$date-calendar-hover-color:                   $light-black;
+$date-calendar-hover-bg-color:                $off-white;
+$date-calendar-active-color:                  $white;
+$date-calendar-active-bg-color:               $primary-color;
+$date-calendar-selected-bg-color:             $light-black;
+$date-calendar-selected-color:                $white;
+
+// Range Slider Color
+$range-slider-bg-color:                       $light-grey;
+$range-slider-selection-bg-color:             $primary-color;
+$range-slider-handle-color:                   $primary-color;
+$range-slider-tick-color:                     $light-grey;
+$range-slider-tick-selection-color:           $primary-color;
+$tooltip-border-color:                        $black;
+
+// Select Box Color
+$select-box-before-color:                       $light-grey;
+$select-box-before-bg-color:                    $light-grey;
+$select-box-before-checked-bg-color:            $light-grey;
+$select-box-before-checked-color:               $white;
+$select-box-checked-label-color:                $light-black;
+
+// Media Embed Color
+$media-embed-bg-color:                          $off-white;
+$media-embed-hover-bg-color:                    darken($off-white, 10);
+
+// Select Picker
+$select-picker-color:                           $light-grey;
+$select-picker-border-color:                    $light-grey;
+$select-picker-dropdown-link-color:             $light-black;
+$select-picker-dropdown-link-hover-color:       $black;
+$select-picker-dropdown-link-hover-bg-color:    $off-white;
+$select-picker-dropdown-link-active-color:      $primary-color;
+
+// Side Panel Color Dark BG
+$side-panel-wrapper-before-bg-color:            $black;
+$side-panel-header-link-border-color-dark-bg:           $black;
+$side-panel-trigger-close-bg-color-dark-bg:             $white;
+$side-panel-nav-link-color-dark-bg:                     $grey;
+$side-panel-nav-link-before-bg-color-dark-bg:           $white;
+$side-panel-dropdown-link-color-dark-bg:                $grey;
+$side-panel-dropdown-bg-color-dark-bg:                  $white;
+$side-panel-dropdown-link-hover-color-dark-bg:          $white;
+$side-panel-dropdown-link-hover-bg-color-dark-bg:       $white;
+$side-panel-navbar-pos-search-color-dark-bg:            $white;
+
+// Side Panel Color Light BG
+$side-panel-header-link-border-color-light-bg:           $off-white;
+$side-panel-nav-link-color-light-bg:                     $dark-grey;
+$side-panel-nav-link-before-bg-color-light-bg:           $white;
+$side-panel-trigger-close-bg-color-light-bg:             $white;
+$side-panel-navbar-pos-search-color-light-bg:            $black;
+$side-panel-dropdown-link-color-light-bg:                $grey;
+$side-panel-dropdown-bg-color-light-bg:                  $white;
+$side-panel-dropdown-link-hover-color-light-bg:          $grey;
+$side-panel-dropdown-link-hover-bg-color-light-bg:       $white;
+
+// Site Search Color light bg
+$fullscreen-site-search-holder-bg-color:        $black;
+$fullscreen-search-close-color:                 $light-black;
+$fullscreen-search-close-color-light-bg:        $light-black;
+$fullscreen-search-close-hover-color-light-bg:  $light-black;
+$fullscreen-search-close-border-color-light-bg: $light-black;
+$fullscreen-search-fields-color-light-bg:       $light-black;
+
+// Site Search Color dark bg
+$fullscreen-search-close-color-dark-bg:			 $white;			
+$fullscreen-search-close-border-color-dark-bg:   $white;
+$fullscreen-search-close-hover-color-dark-bg:	 $white;
+$fullscreen-search-fields-color-dark-bg:		 $white;
+$fullscreen-search-fields-color-dark-bg:		 $white;
+
+// Blog Sidebar Tag Colors
+$tag-text-color: $light-black;
+$tag-background-color: $off-white;
+$tag-text-hover-color: $white;
+$tag-background-hover-color: $primary-color;
+
+// Slider colors
+$slider-title-color: $white;
+$slider-title-span-color: darken($primary-color, 10);
+
+// Revolution Slider Colors
+$slider-sub-title-color: $primary-color;
+$slider-main-title: $dark-grey;
+$slider-text-color: $dark-grey;
+$slider-tp-arrows-bg-color: $primary-color;
+$slider-tp-arrows-hover-bg-color: darken($primary-color, 10);
+$slider-tp-arrows-arrow-color: $white;
+
+// Twiiter Widget colors
+
+$twitter-icon-color: $dark-grey;
+$twitter-icon-hover-color: $primary-color;
+$twitter-title-color: $light-black;
+$twitter-link-color: $primary-color;
+$twitter-link-hover-color: $primary-color;
+$twitter-title-hover-color:$primary-color;

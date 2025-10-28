@@ -1,0 +1,68 @@
+/******* sign up form styles *******/
+
+// sign up form styles
+.signup-block {
+    position: relative;
+    @include media-breakpoint-between (lg, xl) {
+        height: 100vh;
+    }
+    .signup-wrap {
+        padding: 6.25rem 0 3.125rem;
+        @include media-breakpoint-between (lg, xl) {
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            left: 0;
+            width: 100%;
+            padding: 0;
+        }
+        .inner-wrap {
+            margin: 0 auto;
+            padding: 0 0.9375rem;
+            @include breakpoint-min ($screen-wide) {
+                max-width: 36.25rem;
+            }
+        }
+        @include breakpoint-min ($screen-large) {
+            h2 {
+                font-size: 2.375rem;
+            }
+        }
+        .circular-icon {
+            @include breakpoint-min ($screen-medium) {
+                width: 5rem;
+                height: 5rem;
+                line-height: 5.313rem;
+                border-width: 2px;
+                font-size: 2.375rem;
+            }
+            &.bottom-space {
+                margin-bottom: #{$global-space * 1.5};
+                @include breakpoint-min ($screen-large) {
+                    margin-bottom: #{$global-space * 3};
+                }
+                @include breakpoint-min ($screen-extra-large) {
+                    margin-bottom: #{$global-space * 3};
+                }
+                @include breakpoint-min ($screen-wide) {
+                    margin-bottom: #{$global-space * 7};
+                }
+            }
+        }
+        .form-group {
+            margin-bottom: #{$global-space * 1.5};
+            @include breakpoint-min ($screen-medium) {
+                margin-bottom: #{$global-space * 2};
+            }
+            @include breakpoint-min ($screen-large) {
+                margin-bottom: #{$global-space * 3};
+            }
+            @include breakpoint-min ($screen-extra-large) {
+                margin-bottom: #{$global-space * 3};
+            }
+            @include breakpoint-min ($screen-wide) {
+                margin-bottom: #{$global-space * 7};
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+
+/******* author block ********/
+
+//author block
+.about-author {
+    border: $about-author-border-color 1px solid;
+    border-bottom: $about-author-border-color 3px double;
+    padding: 1.875rem 0.9375rem;
+    h4 {
+        @include font-size($normal-font-sizes);
+        font-weight: $regular-font-weight;
+        font-family: $font-family-base;
+        color: $about-author-title-color;
+    }
+    .author-av {
+        float: left;
+        width: 3.75rem;
+        margin-right: 1.25rem;
+        img {
+            width: 100%;
+        }
+    }
+    .author-desc {
+        overflow: hidden;
+        display: table-row;
+    }
+    @include breakpoint-min ($screen-small) {
+        .author-av {
+            width: 8.75rem;
+        }
+    }
+}
+
+.author-posts {
+    padding: 1.875rem 0 0;
+    @include breakpoint-min ($screen-large) {
+        padding-bottom: 1.875rem;
+    }
+}

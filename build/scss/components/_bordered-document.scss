@@ -1,0 +1,88 @@
+/* bordered document style for html and body */
+
+.bordered-document {
+    margin: 0.9375rem;
+    @include breakpoint-min ($screen-medium) {
+        margin: 1.875rem;
+    }
+    .main-header {
+        top: 0.9375rem;
+        left: 0.9375rem;
+        right: 0.9375rem;
+        @include breakpoint-min ($screen-medium) {
+            top: 1.875rem;
+            left: 1.875rem;
+            right: 1.875rem;
+        }
+    }
+    .top-spaced-line {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        display: block;
+        height: 0.9375rem;
+        background: $document-space-bg-color;
+        z-index: 999999;
+        @include breakpoint-min ($screen-medium) {
+            height: 1.875rem;
+        }
+    }
+    .left-spaced-line {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 0.9375rem;
+        background: $document-space-bg-color;
+        z-index: 999999;
+        left: 0;
+        @include breakpoint-min ($screen-medium) {
+            width: 1.875rem;
+        }
+    }
+    .bottom-spaced-line {
+        position: fixed;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 0.9375rem;
+        background: $document-space-bg-color;
+        z-index: 999999;
+        bottom: 0;
+        @include breakpoint-min ($screen-medium) {
+            height: 1.875rem;
+        }
+    }
+    .right-spaced-line {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 0.9375rem;
+        background: $document-space-bg-color;
+        z-index: 999999;
+        right: 0;
+        @include breakpoint-min ($screen-medium) {
+            width: 1.875rem;
+        }
+    }
+    #wrapper {
+        padding: 0 0 0.9375rem;
+        @include breakpoint-min ($screen-medium) {
+            padding: 0 0 1.875rem;
+        }
+    }
+    .section-scroll {
+        right: 2rem;
+    }
+    #top-search {
+        margin: 0 -0.938rem !important;
+        @include breakpoint-min ($screen-medium) {
+            margin: 0 -1.938rem !important;
+        }
+        @include breakpoint-min ($screen-extra-large) {
+            margin: 0 -3.2rem !important;
+        }
+    }
+}

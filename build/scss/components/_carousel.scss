@@ -1,0 +1,123 @@
+/******* owl carousel styles *******/
+
+// owl carousel styles
+.owl-carousel {
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 5rem;
+            color: $owl-nav-color;
+            &.disabled {
+                opacity: .3;
+                cursor: none;
+                pointer-events: none;
+            }
+            &:hover {
+                color: $owl-nav-hover-color;
+            }
+        }
+        .owl-prev {
+            right: calc(100%);
+        }
+        .owl-next {
+            left: calc(100%);
+        }
+    }
+    .owl-item {
+        img {
+            width: auto;
+            display: inline-block;
+        }
+        .img-block {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        .owl-nav {
+            .owl-prev {
+                right: calc(100%);
+            }
+            .owl-next {
+                left: calc(100%);
+            }
+        }
+    }
+    @include breakpoint-min ($screen-wide) {
+        .owl-nav {
+            .owl-prev {
+                right: calc(100% + 8.571rem);
+            }
+            .owl-next {
+                left: calc(100% + 8.571rem);
+            }
+        }
+    }
+}
+
+// portfolio slide styles
+.owl-carousel.portfolio-slide {
+    .owl-nav {
+        position: absolute;
+        bottom: 2.143rem;
+        right: 2.143rem;
+        z-index: 9;
+        .owl-prev,
+        .owl-next {
+            position: relative;
+            background: $portfolio-slide-nav-bg-color;
+            height: 3.571rem;
+            width: 3.571rem;
+            color: $portfolio-slide-nav-color;
+            right: auto;
+            left: auto;
+            top: auto;
+            transform: none;
+            display: inline-block;
+            margin-left: .7rem;
+            font-size: 3rem;
+            line-height: 3.571rem;
+            text-align: center;
+        }
+    }
+}
+
+
+/******* carousel styles *******/
+
+// multi image
+.multi-image {
+    .img-block {
+        position: relative;
+    }
+}
+
+
+// multi image
+.no-gutter-slide {
+    .owl-dots {
+        text-align: center;
+        .owl-dot {
+            display: inline-block;
+            margin: 0 0.3125rem;
+            span {
+                width: 0.625rem;
+                height: 0.625rem;
+                border-radius: 50%;
+                background: $owl-nav-color;
+                display: inline-block;
+                transition: .3s all linear;
+            }
+            &.active,
+            &:hover {
+                span {
+                    background: $owl-nav-hover-color;
+                }
+            }
+        }
+    }
+}

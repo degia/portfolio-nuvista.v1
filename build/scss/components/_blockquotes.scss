@@ -1,0 +1,111 @@
+/******* blockquote styles *******/
+
+// blockquote styles
+.blockquote-block {
+    blockquote {
+        padding: 0.625rem 1.25rem;
+        border-left: 5px solid $blockquotes-border-color;
+        position: relative;
+        margin: 0;
+        color: $blockquote-color;
+        @include font-size($normal-font-sizes);
+        line-height: 1.6;
+        small {
+            color: $blockquotes-small-color;
+        }
+        &:after {
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 0;
+            height: 0;
+            content: '';
+            border: 0.3125rem solid transparent;
+            transition: height ease-out .2s;
+        }
+        &:hover:after {
+            height: 100%;
+            border-right-color: $blockquotes-hover-after-color;
+        }
+    }
+    &.text-right {
+        blockquote {
+            border: none;
+            border-right: 0.3125rem solid $blockquotes-border-color;
+            &:after {
+                left: auto;
+                right: -5px
+            }
+        }
+    }
+    // blockquote v2 styles
+    &.blockquote-block-v2 {
+        blockquote {
+            border: none;
+            padding-left: 3.125rem;
+            &:before {
+                position: absolute;
+                font-family: 'roxine-font-icon' !important;
+                content: '\f2ff';
+                top: 0;
+                left: 0;
+                font-size: 1.875rem;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+    // blockquote v3 styles
+    &.blockquote-block-v3 {
+        blockquote {
+            border: none;
+            padding: 0.9375rem;
+            @include breakpoint-min ($screen-medium) {
+                padding: 1.875rem 3.125rem;
+            }
+        }
+    }
+    // blockquote v4 styles
+    &.blockquote-block-v4 {
+        blockquote {
+            box-shadow: inset 0 0 0 0.3125rem $blockquotes-border-color;
+            border: none;
+            padding-top: 4.375rem;
+            padding-bottom: 3.125rem;
+            color: $white;
+            &:before {
+                position: absolute;
+                font-family: 'roxine-font-icon' !important;
+                content: '\f2ff';
+                top: 0.9375rem;
+                left: 50%;
+                margin-left: -15px;
+                font-size: 1.875rem;
+            }
+            &:after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 0;
+                content: '';
+                border: 0.3125rem solid transparent;
+                transition: width ease-out, height ease-out .25s;
+            }
+            &:hover:after {
+                width: 100%;
+                height: 100%;
+                border-top-color: $blockquotes-hover-after-color;
+                border-right-color: $blockquotes-hover-after-color;
+            }
+        }
+    }
+    &.bg-primary {
+        blockquote {
+            &:after {
+                border: none;
+            }
+        }
+    }
+}

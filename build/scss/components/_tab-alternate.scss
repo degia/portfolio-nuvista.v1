@@ -1,0 +1,251 @@
+/******* tab styles *******/
+
+// tab styles
+.tab-container.tab-secondary {
+    text-align: center;
+    .nav-tabs {
+        font-size: .6rem;
+        .nav-link {
+            color: $light-black;
+            font-weight: $bold-font-weight;
+            text-transform: uppercase;
+        }
+        .nav-item {
+            display: inline-block;
+            float: none;
+            & + .nav-item {
+                margin: 0 0 0 -0.4125rem;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            font-size: 0.875rem;
+        }
+    }
+    // button style tab
+    .tab-button-nav {
+        border-bottom: 0;
+        text-align: center;
+        display: block;
+        .nav-link {
+            padding: 0.75rem .7rem;
+            border: 0;
+            color: $light-black;
+            border-radius: 0;
+            background: $off-white;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                background: $secondary-color;
+                color: $white;
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                background: $secondary-color;
+                color: $white;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.6375rem 2.813rem;
+            }
+        }
+    }
+    .tab-content {
+        @include font-size($small-font-sizes);
+        letter-spacing: 0.07143rem;
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // text style tab
+    .tab-text-nav {
+        border-width: 0 0 0.1429rem;
+        border-color: $light-grey;
+        display: inline-block;
+        .nav-link {
+            padding: 0.75rem .7rem;
+            border: 0;
+            color: $light-black;
+            position: relative;
+            &:before {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                content: '';
+                height: 0.13rem;
+                background: $secondary-color;
+                transition: all 0.3s ease-in-out .06s;
+                visibility: hidden;
+                opacity: 0;
+                transform: scale(0);
+            }
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $secondary-color;
+                background: none;
+                &:before {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $secondary-color;
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.6375rem 2.813rem;
+            }
+        }
+    }
+    // icon style tab
+    .tab-icon-nav {
+        border-width: 0;
+        border-color: $light-grey;
+        display: inline-block;
+        .icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: $light-black;
+        }
+        .nav-link {
+            padding: 0.75rem .7rem;
+            border: 0;
+            color: $light-black;
+            position: relative;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $secondary-color;
+                background: none;
+                .icon {
+                    color: $light-black;
+                }
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $secondary-color;
+                .icon {
+                    color: $light-black;
+                }
+            }
+        }
+        @include breakpoint-min ($screen-medium) {
+            .nav-link {
+                padding: 0.75rem 2rem;
+            }
+        }
+    }
+}
+
+/******* tab styles *******/
+
+// tab styles
+.tab-container.tab-black {
+    .nav-tabs {
+        .nav-link {
+            color: $light-black;
+        }
+    }
+    // button style tab
+    .tab-button-nav {
+        .nav-link {
+            color: $light-black;
+            background: $off-white;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+    // text style tab
+    .tab-text-nav {
+        border-color: $light-grey;
+        .nav-link {
+            color: $light-black;
+            &:before {
+                background: $black;
+            }
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $black;
+                background: none;
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $black;
+            }
+        }
+    }
+    // icon style tab
+    .tab-icon-nav {
+        border-color: $light-grey;
+        .icon {
+            color: $light-black;
+        }
+        .nav-link {
+            color: $light-black;
+            &:hover,
+            &:focus,
+            &.active,
+            &.active:focus,
+            &.active:hover {
+                color: $black;
+                background: none;
+                .icon {
+                    color: $light-black;
+                }
+            }
+        }
+        .open {
+            .nav-link,
+            .nav-link:focus,
+            .nav-link:hover {
+                color: $black;
+                .icon {
+                    color: $light-black;
+                }
+            }
+        }
+    }
+}

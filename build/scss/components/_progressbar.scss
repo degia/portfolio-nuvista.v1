@@ -1,0 +1,18 @@
+/******* Pies and Skills styles *******/
+
+// Pies and Skills styles
+.progress-block {
+    .progress {
+        height: inherit;
+        margin: 0;
+        .progress-bar {
+            line-height: inherit;
+        }
+        .skill {
+            .val {
+                float: right;
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+}

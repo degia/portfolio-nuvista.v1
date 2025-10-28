@@ -1,0 +1,14 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+@import 'base/colors';
+@import 'modifiers/custom-variables';
+@import 'modifiers/mixins';
+
+$font-size-root: 				14px;
+$enable-flex:               	true;
+$enable-rounded:				false;
+$enable-shadows:				true;
+$enable-transitions:			true;

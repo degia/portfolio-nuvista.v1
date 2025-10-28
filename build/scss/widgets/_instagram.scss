@@ -1,0 +1,27 @@
+/******* instagram widget styles *******/
+
+// instagram widget styles
+.instagram-widget {
+    ul {
+        @extend %listreset;
+        margin-top: 1.875rem;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            width: 31%;
+            margin: 0 1% 2.5% 0;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+            img {
+                width: 100%;
+            }
+            @include breakpoint-min ($screen-extra-large) {
+                margin: 0 0.9% 2.5% 0;
+            }
+            @include breakpoint-min ($screen-wide) {
+                margin: 0 1.9% 2.5% 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+/******* caption fade up *******/
+
+// caption fade up styles
+.caption-fade-up {
+    position: relative;
+    figcaption,
+    .figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: transform linear .2s, opacity linear .2s;
+        padding: 2.5rem 1.875rem;
+        opacity: 0;
+    }
+    &:hover {
+        figcaption,
+        .figcaption {
+            opacity: 1;
+            transform: translate(0, -6.429rem);
+        }
+        .team-des-v2 {
+            transform: translate(0, -0.7143rem);
+        }
+    }
+}

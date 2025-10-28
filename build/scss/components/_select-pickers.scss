@@ -1,0 +1,127 @@
+/******* select picker styles *******/
+
+// select picker styles
+.select-picker-block {
+    .bootstrap-select:not([class*='col-']):not([class*='form-control']):not(.input-group-btn) {
+        width: 100%;
+    }
+    .btn-group,
+    .btn-group-vertical {
+        display: inline-flex!important;
+        &.bootstrap-select {
+            .dropdown-toggle {
+                &:focus {
+                    outline: none !important;
+                }
+            }
+        }
+    }
+    .btn {
+        width: 100%;
+        border: 0.1429rem solid $select-picker-border-color;
+        font: 1.125rem/2rem $headings-font-family;
+        padding: 0 0.9375rem;
+        background: none;
+        letter-spacing: 0.2429rem;
+        border-radius: 0;
+        color: $select-picker-color;
+        font-weight: 700;
+        height: 3.125rem;
+        box-shadow: none;
+        text-transform: capitalize;
+        // primary button
+        &.btn-primary {
+            background: $btn-primary-bg;
+            color: $white;
+            &:hover {
+                background: darken($btn-primary-bg, 10);
+                color: $white;
+            }
+            &.dropdown-toggle.bs-placeholder,
+            &.dropdown-toggle.bs-placeholder:hover,
+            &.dropdown-toggle.bs-placeholder:focus,
+            &.dropdown-toggle.bs-placeholder:active {
+                color: $white;
+            }
+        }
+        // secondary button
+        &.btn-secondary {
+            background: $secondary-color;
+            color: $white;
+            &:hover {
+                background: darken($secondary-color, 10);
+                color: $white;
+            }
+        }
+        // secondary button
+        &.btn-tertiary {
+            background: $off-white;
+            &:hover {
+                background: darken($off-white, 10);
+            }
+        }
+    }
+    .dropdown-menu {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 10px 20px 0 rgba(36, 83, 107, 0.15);
+        &>.active>a,
+        &>.active>a:focus,
+        &>.active>a:hover {
+            background-color: $select-picker-dropdown-link-active-color;
+        }
+        >li {
+            >a {
+                display: block;
+                padding: 3px 15px;
+                clear: both;
+                font-weight: 400;
+                line-height: 1.42857143;
+                color: $select-picker-dropdown-link-color;
+                white-space: nowrap;
+                &:focus,
+                &:hover {
+                    color: $select-picker-dropdown-link-hover-color;
+                    text-decoration: none;
+                    background-color: $select-picker-dropdown-link-hover-bg-color;
+                }
+            }
+        }
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+    .glyphicon-ok:before {
+        font-family: 'roxine-font-icon';
+        content: '\e489';
+    }
+    .dropup .dropdown-menu {
+        box-shadow: 0 -10px 20px 0 rgba(36, 83, 107, 0.15);
+    }
+    .btn .caret {
+        margin-left: 0;
+    }
+    .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-top: 4px solid\9;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+    }
+    .dropup .caret {
+        content: "";
+        border-top: 0;
+        border-bottom: 4px dashed;
+        border-bottom: 4px solid\9;
+    }
+    .open>.dropdown-menu {
+        display: block;
+    }
+    .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+        margin-top: 0px;
+    }
+}

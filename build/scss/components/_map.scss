@@ -1,0 +1,19 @@
+/******* map styles *******/
+
+// map styles
+.grayscaled-map {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.full-map {
+    .img-wrap {
+        min-height: 250px;
+        height:inherit;
+        position: relative;
+        @include breakpoint-min ($screen-large) {
+            min-height: inherit;
+            position: absolute;
+        }
+    }
+}

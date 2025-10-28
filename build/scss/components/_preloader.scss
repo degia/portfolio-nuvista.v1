@@ -1,0 +1,85 @@
+/* preloader styles */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	white-space: nowrap;
+	text-align: center;
+	background-color: $preloader-background;
+	z-index: 9999999999;
+	transition: all linear .3s;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		margin-right: -0.25em;
+	}
+
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	.holder {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;
+	}
+}
+
+/*coffee cup*/
+.coffee_cup{
+    width: 40px;
+    height: 50px;
+    border: 2px $preloader-icon-border-color solid;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    margin: 36px auto;
+}
+
+.coffee_cup:after, .coffee_cup:before{
+    position: absolute;
+    content: "";
+}
+
+.coffee_cup:after {
+    width: 10px;
+    height: 20px;
+    border: 2px $preloader-icon-border-color solid;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    left: 40px;
+    top: 5px;
+}
+
+.coffee_cup:before{
+    width: 3px;
+    height: 10px;
+    background-color: $preloader-icon-border-color;
+    top: -16px;
+    left: 12px;
+    box-shadow: 5px 0px 0px 0px $preloader-icon-border-color,
+                5px -5px 0px 0px $preloader-icon-border-color,
+                10px 0px 0px 0px $preloader-icon-border-color;
+    -webkit-animation: steam 700ms linear infinite alternate;
+       -moz-animation: steam 700ms linear infinite alternate;
+            animation: steam 700ms linear infinite alternate;
+}
+
+@-webkit-keyframes steam{
+    0%{height: 0px;}
+    100%{height: 10px;}            
+}
+@-moz-keyframes steam{
+    0%{height: 0px}
+    100%{height: 10px;}            
+}
+@keyframes steam{
+    0%{height: 0px}
+    100%{height: 10px;}            
+}

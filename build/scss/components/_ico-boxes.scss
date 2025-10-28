@@ -1,0 +1,214 @@
+/******* icon box styles *******/
+
+// icon boxes styles
+.ico-box {
+    padding: 1.563rem #{$global-space * 1.5} 0.9375rem;
+    text-align: center;
+    position: relative;
+    @include transition (box-shadow linear .5s);
+    overflow: hidden;
+    letter-spacing: 0.02rem;
+    @include breakpoint-min ($screen-large) {
+        padding: 2.8125rem #{$global-space * 5} 1.2rem;
+    }
+    &:before {
+        position: absolute;
+        content: ' ';
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $icon-box-before;
+        transition: transform linear .2s;
+        transform: translate(100% + 1, 0);
+    }
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+    .icon,
+    .content-title {
+        color: $icon-box-title-color;
+        a {
+            color: $icon-box-link-color;
+        }
+    }
+    &:hover {
+        box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
+        &:before {
+            transform: translate(0, 0);
+        }
+        .icon,
+        .content-title {
+            color: $icon-box-link-hover-color;
+            a {
+                color: $icon-box-link-hover-color;
+            }
+        }
+    }
+    &.dark-hover:hover {
+        .icon,
+        .content-title {
+            color: $icon-box-alternate-title-color;
+            a {
+                color: $icon-box-alternate-link-color;
+            }
+        }
+    }
+    .icon {
+        margin-bottom: #{$global-space * 2 + $global-space / 2};
+        color: $icon-box-icon-color;
+        font-size: 2.8125rem;
+        line-height: 1;
+    }
+    .des {
+        color: $icon-box-text-color;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .link-holder {
+        margin-top: $global-space * 3;
+        .link-more {
+            text-transform: uppercase;
+            color: $link-more-color;
+            font-size: 0.875rem;
+            font-family: $button-font-family;
+            &:hover {
+                color: $link-more-hover-color;
+            }
+        }
+    }
+    // v2
+    &.dark-hover {
+        &:before {
+            background: $light-black;
+        }
+        &:hover {
+            .des,
+            .link-more {
+                color: $light-grey;
+            }
+        }
+        .link-more:hover {
+            color: $white;
+        }
+    }
+    &.has-shadow {
+        box-shadow: 0 10px 40px 0px rgba(36, 83, 107, 0.1);
+    }
+    &.has-shadow1 {
+        box-shadow: 0 0.1429rem 0.6429rem 0.07143rem rgba(1, 2, 2, 0.1);
+    }
+}
+
+// icon boxes bordered styles
+.bordered-icon {
+    .ico-box {
+        .icon {
+            width: 6.25rem;
+            height: 6.25rem;
+            margin: 0 auto 1.875rem;
+            text-align: center;
+            border: rgba(0, 0, 0, 0.08) 0.1875rem solid;
+            line-height: 6.25rem;
+            transition: all .3s linear;
+        }
+        &:hover {
+            .icon {
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+            }
+        }
+    }
+}
+
+// icon boxes v1 styles
+.icon-v1 {
+    .ico-box {
+        text-align: left;
+        padding: 0;
+        @include breakpoint-min ($screen-large) {
+            padding: 0;
+        }
+        .content-title {
+            text-transform: capitalize;
+            letter-spacing: 0;
+            padding-left: 1.875rem;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 1.125rem;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+// icon boxes v2 styles
+.icon-box-v2 {
+    .ico-box {
+        padding: 0;
+        min-height: 10rem;
+        border: rgba(0, 0, 0, 0.1) 0.0625rem solid;
+        border-radius: 4px;
+        @include breakpoint-min ($screen-large) {
+            padding: 0;
+        }
+        .icon {
+            position: absolute;
+            width: 6.25rem;
+            border-right: rgba(0, 0, 0, 0.1) 0.0625rem solid;
+            height: 100%;
+            padding-top: 2rem;
+        }
+        .icon-desc {
+            text-align: left;
+            padding: 2rem #{$global-space * 1.5};
+            padding-left: 7.813rem;
+            @include breakpoint-min ($screen-large) {
+                padding: 2rem #{$global-space * 1.5};
+                padding-left: 7.813rem;
+            }
+        }
+    }
+}
+
+// icon boxes flipped styles
+.flipped-box {
+    .ico-box,
+    .front-box,
+    .back-box {
+        min-height: 9.375rem;
+        width: 100%;
+        @include breakpoint-min ($screen-large) {
+            min-height: 11.25rem;
+        }
+    }
+    .flipper-box {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .ico-box {
+        perspective: 1000;
+        .front-box,
+        .back-box {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .back-box {
+            transform: rotateY(180deg);
+        }
+        &:hover {
+            .flipper-box {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}

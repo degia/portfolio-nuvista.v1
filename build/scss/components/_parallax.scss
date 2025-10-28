@@ -1,0 +1,28 @@
+/******* parallax styles *******/
+
+// parallax styles
+.parallax {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: initial;
+    background-size: cover;
+    background-position: 50% 0;
+    z-index: 1;
+    position: relative;
+    /* Hide Parallax on mobile devices */
+    @include breakpoint-max ($screen-medium) {
+        background-attachment: scroll;
+        background-position: 50% 50%!important;
+        background-size: cover;
+    }
+    @extend .has-overlay;
+    > * {
+        position: relative;
+        z-index: 2;
+    }
+    &:before {
+        top: -1.429rem;
+        bottom: -1.429rem;
+    }
+}

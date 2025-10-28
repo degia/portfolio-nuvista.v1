@@ -1,0 +1,250 @@
+/* footer styles */
+
+.footer {
+    .footer-main {
+        /*background: $footer-bg-image;*/
+        background-color: $footer-bg-color;
+        position: relative;
+        color: $footer-main-color;
+        z-index: 2;
+        p {
+            margin: 0;
+            color: $footer-main-color;
+            a {
+                color: $footer-main-color;
+                &:hover {
+                    color: $footer-link-hover-color;
+                }
+            }
+        }
+        .holder {
+            position: relative;
+            padding-left: 3.5rem;
+            text-align: left;
+            margin: 0.7143rem 0;
+            p {
+                margin: 0;
+                color: $footer-main-color;
+                a {
+                    color: $footer-main-color;
+                    &:hover {
+                        color: $footer-link-hover-color;
+                    }
+                }
+            }
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            @include font-size ($h2-font-sizes);
+            color: $footer-icon-color;
+            transform: translate(0, -50%);
+        }
+        @include breakpoint-min ($screen-extra-large) {
+            padding-bottom: #{$global-space * 8};
+        }
+        h4 {
+            color: $footer-main-color;
+            font-size: 1.25rem;
+            margin-top: 1.25rem;
+            @include breakpoint-min ($screen-large) {
+                margin-top: 0;
+            }
+        }
+    }
+    .footer-logo {
+        margin-bottom: 1.875rem;
+        @include breakpoint-min ($screen-large) {
+            margin-bottom: 0;
+        }
+        @include breakpoint-max ($screen-large) {
+            &.text-right {
+                text-align: left!important;
+                margin: 1.25rem 0 0;
+            }
+        }
+    }
+    .divider-border {
+        background: darken($footer-main-color, 35);
+        margin: $global-space * 3 auto;
+        @include breakpoint-min ($screen-medium) {
+            margin: $global-space * 5 auto;
+        }
+        &.sm-border {
+            max-width: 35.63rem;
+        }
+    }
+    .footer-bottom {
+        padding: $global-space * 3 0;
+        background: $footer-copyright-bg-color;
+        p {
+            margin: 0;
+            color: $footer-main-color;
+        }
+    }
+    @include breakpoint-max ($screen-large) {
+        .text-right {
+            text-align: left !important;
+        }
+    }
+    .widget-block {
+        h4 {
+            text-transform: uppercase;
+            color: $footer-title-color;
+        }
+        .post-block {
+            .post-holder {
+                .post-desc {
+                    h6 {
+                        a {
+                            color: $footer-main-color;
+                        }
+                    }
+                    p {
+                        color: $footer-main-color;
+                    }
+                }
+                &:hover {
+                    h6 {
+                        a {
+                            color: $footer-link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .instagram-widget {
+        ul {
+            li {
+                width: 29%;
+                margin: 0 1% 2.5% 0;
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+                @include breakpoint-min ($screen-extra-large) {
+                    margin: 0 0.9% 2.5% 0;
+                }
+                @include breakpoint-min ($screen-wide) {
+                    margin: 0 4% 6% 0;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav {
+    ul {
+        @extend %listreset;
+        li {
+            position: relative;
+            display: block;
+            margin: 0;
+            list-style-type: none;
+            a {
+                color: $footer-main-color;
+                font-weight: 400;
+                &:hover {
+                    color: $footer-link-hover-color;
+                }
+            }
+        }
+    }
+    &.inline-nav {
+        @include breakpoint-max ($screen-medium) {
+            &.text-center {
+                text-align: left !important;
+            }
+        }
+        li {
+            display: inline-block;
+            margin: 0 1rem 0.625rem 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &.bordered-nav {
+        ul {
+            li {
+                &:before {
+                    position: absolute;
+                    content: '|';
+                    top: 0;
+                    left: -0.9375rem;
+                }
+                &:first-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//footer v1
+.footer-v1 {
+    .footer-main {
+        background: $footer-copyright-bg-color;
+    }
+}
+
+//footer v2
+.footer-v2 {
+    .btn {
+        @include breakpoint-min ($screen-medium) {
+            min-width: 8.9rem;
+            line-height: 1;
+        }
+        &.btn-trans-dark-gray {
+            color: $footer-main-color;
+        }
+    }
+}
+
+//footer v3
+.footer-v3 {
+    .footer-map {
+        background-image: url(../img/map-05.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .bg-white {
+        background-color: $white;
+        .footer-bottom {
+            background: $white;
+        }
+        .divider-border {
+            background: $off-white;
+        }
+        .widget-block {
+            h4 {
+                color: $light-black;
+            }
+            .post-block {
+                .post-holder {
+                    &:hover {
+                        h6 {
+                            a {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-nav {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

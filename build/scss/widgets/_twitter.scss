@@ -1,0 +1,59 @@
+/******* twitter feed styles *******/
+
+// twitter feed styles
+.twitter-feed {
+    .tweet-holder {
+        position: relative;
+        padding-left: 80px;
+        margin-top: 30px;
+        .twit-ico {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3.438rem;
+            color: $dark-grey;
+            font-size: 2rem;
+            line-height: 1;
+            text-align: center;
+            transition: all linear 0.2s;
+        }
+        .twit-desc {
+            h6 {
+                margin: 0;
+                font-size: 0.875rem;
+                font-weight: $regular-font-weight;
+                font-family: $font-family-base;
+                color: $light-black;
+                a {
+                    color: $light-black;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+            p {
+                margin: 0;
+                font-size: 0.75rem;
+                color: $light-black;
+                line-height: 1.575rem;
+                a {
+                    color: $primary-color;
+                    word-break: break-word;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        &:hover {
+            h6 {
+                a {
+                    color: $primary-color;
+                }
+            }
+            .twit-ico {
+                color: $primary-color;
+            }
+        }
+    }
+}

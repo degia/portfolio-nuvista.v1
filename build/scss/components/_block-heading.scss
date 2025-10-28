@@ -1,0 +1,54 @@
+/******* block heading styles *******/
+
+// block heading styles
+.block-main-heading {
+    color: $block-heading-color;
+}
+
+.block-sub-heading {
+    @include font-size($normal-font-sizes);
+    display: block;
+    margin-bottom: $global-space;
+    letter-spacing: 0.0625rem;
+    line-height: 1.875rem;
+    font-style: italic;
+    color: $block-sub-heading-color;
+    big {
+        color: $block-sub-heading-big-color;
+        font-style: normal;
+        @include font-size($heading-s-sizes);
+    }
+}
+
+.block-top-heading {
+    color: $block-top-heading-color;
+    text-transform: uppercase;
+    margin: 0 0 $global-space;
+    text-transform: uppercase;
+    font-weight: $thin-font-weight;
+    letter-spacing: 0.2143rem;
+    &.text-white {
+        color: $white;
+    }
+}
+
+.block-heading {
+    h3 {
+        font-weight: $thin-font-weight;
+    }
+    .content-title {
+        @include font-size($normal-font-m-sizes);
+        color: $block-heading-content-title-color;
+    }
+}
+
+// single heading
+.heading {
+    h2 {
+        color: $block-heading-color;
+        font-weight: $bold-font-weight;
+        span {
+            color: $heading-span-color;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/******* data table styles *******/
+
+// data table styles
+.data-table {
+    border: 1px solid $table-border-color;
+    .table {
+        border: none;
+        margin: 0;
+        @include breakpoint-max ($screen-small) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+        >thead {
+            > tr {
+                > th {
+                    border-width: 0px;
+                    @include font-size($normal-font-m-sizes);
+                }
+            }
+        }
+    }
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+        padding: 0.625rem;
+        border-color: $table-border-color;
+        vertical-align: middle;
+    }
+    .table-striped tbody tr:nth-of-type(odd),
+    .table-hover tbody tr:hover {
+        background-color: $table-bg-color;
+    }
+    .vertical-bordered {
+        &.table>tbody>tr>td,
+        &.table>tbody>tr>th,
+        &.table>tfoot>tr>td,
+        &.table>tfoot>tr>th,
+        &.table>thead>tr>td,
+        &.table>thead>tr>th {
+            border-right: 1px solid $table-border-color;
+            border-top: none;
+        }
+        &.table>tbody>tr>td:last-child,
+        &.table>tbody>tr>th:last-child,
+        &.table>tfoot>tr>td:last-child,
+        &.table>tfoot>tr>th:last-child,
+        &.table>thead>tr>td:last-child,
+        &.table>thead>tr>th:last-child {
+            border-right: none;
+        }
+        &.table th,
+        &.table td {
+            border-top: none;
+        }
+        >thead {
+            > tr {
+                > th {
+                    border-width: 1px;
+                }
+            }
+        }
+    }
+}

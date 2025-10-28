@@ -1,0 +1,61 @@
+/******* form styles *******/
+
+// form styles
+.form-control {
+    border: 0.1429rem solid $form-border-color;
+    font: 1.125rem/2rem $font-family-base;
+    padding: 0 0.9375rem;
+    background: none;
+    letter-spacing: 0.2429rem;
+    border-radius: 0;
+    color: $form-color;
+    font-weight: $medium-font-weight;
+    height: 3.125rem;
+    box-shadow: none;
+    &:focus {
+        border-color: darken($form-border-color, 15);
+        color: $form-color;
+        background: none;
+        box-shadow: none;
+    }
+    &.form-control-v1 {
+        border-width: 0 0 0.1429rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+textarea.form-control {
+    padding-top: 1rem;
+    padding-bottom: 0.7143rem;
+    min-height: 180px;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 4-18 */
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 19+ */
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+/* IE 10+ */

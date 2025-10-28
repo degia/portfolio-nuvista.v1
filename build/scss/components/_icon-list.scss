@@ -1,0 +1,79 @@
+/******* icon list styles *******/
+
+// icon list styles
+.icon-lists {
+    ul {
+        @extend %listreset;
+        li {
+            list-style-type: none;
+            display: block;
+            position: relative;
+            padding-left: 1.875rem;
+            color: $icon-list-color;
+            margin: 0 0 0.75rem;
+            span {
+                width: 1.875rem;
+                height: 1.875rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 2rem;
+            }
+            a {
+                color: $icon-list-link-color;
+                &:hover {
+                    color: $icon-list-link-hover-color;
+                }
+            }
+        }
+    }
+    @include breakpoint-min ($screen-medium) {
+        &.inline-block {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: 1.25rem;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &.round-icons {
+        ul {
+            li {
+                padding-left: 3.125rem;
+                span {
+                    border-radius: 50%;
+                    border: $icon-list-border-color 1px solid;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.square-icons {
+        ul {
+            li {
+                padding-left: 3.125rem;
+                span {
+                    border: $icon-list-border-color 1px solid;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &.solid-icons {
+        ul {
+            li {
+                padding-left: 3.125rem;
+                span {
+                    border: $icon-list-border-color 1px solid;
+                    background: $icon-list-background-color;
+                    color: $icon-list-alter-color;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

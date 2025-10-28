@@ -1,0 +1,28 @@
+/******* instagram widget styles *******/
+
+// instagram widget styles
+.tag-block {
+    ul {
+        @extend %listreset;
+        margin-top: 1.875rem;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: $regular-font-weight;
+            color: $tag-text-color;
+            margin: 0 0 0.625rem;
+            a {
+                color: $tag-text-color;
+                background: $tag-background-color;
+                border-radius: 20px;
+                padding: 0 1.25rem;
+                display: inline-block;
+                &:hover {
+                    background: $tag-background-hover-color;
+                    color: $tag-text-hover-color;
+                }
+            }
+        }
+    }
+}

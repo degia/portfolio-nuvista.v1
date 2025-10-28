@@ -1,0 +1,238 @@
+/******* visual styles *******/
+
+// visual inner styles
+.visual-inner {
+    @include v-align;
+    @extend .has-overlay;
+    height: 100vh;
+    padding: #{$global-space * 5} 0;
+    min-height: 26.25rem;
+    max-height: 26.25rem;
+    position: relative;
+    z-index: 1;
+    &:before {
+        z-index: -1;
+    }
+    .centered {
+        max-width: none;
+        width: 100%;
+    }
+    @include breakpoint-min ($screen-medium) {
+        padding: #{$global-space * 6} 0;
+        height: 34.38rem;
+        max-height: 34.38rem;
+    }
+    @include breakpoint-min ($screen-large) {
+        padding: #{$global-space * 8} 0;
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        padding: #{$global-space * 10} 0;
+    }
+}
+
+// visual inner pages
+.visual-sub {
+    .visual-inner {
+        height: 100vh;
+        @include breakpoint-min ($screen-medium) {
+            height: 60.71rem;
+        }
+    }
+    .visual-text {
+        max-width: 52.86rem;
+    }
+}
+
+// visual text section
+.visual-text {
+    max-width: 51.43rem;
+    font-size: 1.143rem;
+    color: $visual-text-color;
+    font-family: $font-family-base;
+    font-weight: 400;
+}
+
+// visual text bigger
+.visual-text-bigger {
+    max-width: 47.06rem;
+}
+
+// visual text large
+.visual-text-large {
+    max-width: 67.86rem;
+    p {
+        color: $white;
+        max-width: 47.06rem;
+    }
+}
+
+// visual text block centering
+.visual-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visual-title {
+    @include font-size($h1-font-sizes);
+    font-family: $headings-font-family;
+    color: $visual-title-color;
+    display: block;
+    font-weight: 300;
+    margin-bottom: #{$global-space * 2};
+    span {
+        color: $visual-title-span-color;
+    }
+    @include breakpoint-min ($screen-medium) {
+        margin-bottom: #{$global-space * 3};
+    }
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: #{$global-space * 3};
+    }
+    &.text-white {
+        @include font-size($h2-font-sizes);
+    }
+}
+
+.visual-sub-title {
+    font-weight: 700;
+    margin: 0;
+    @include breakpoint-min ($screen-large) {
+        margin-bottom: 1rem;
+    }
+}
+
+.visual-text-v1,
+.visual-text-v2,
+.visual-text-v3 {
+    .visual-title {
+        margin-bottom: 2rem;
+    }
+    p {
+        margin-bottom: #{$global-space * 2 + 2};
+    }
+    @include breakpoint-min ($screen-medium) {
+        p {
+            margin-bottom: #{$global-space * 3 + 5};
+        }
+    }
+    @include breakpoint-min ($screen-large) {
+        p {
+            margin-bottom: #{$global-space * 4 + 5};
+        }
+    }
+    @include breakpoint-min ($screen-extra-large) {
+        p {
+            margin-bottom: #{$global-space * 5 + 5};
+        }
+    }
+}
+
+.visual-text-v1 {
+    @include font-size($normal-font-m-sizes);
+    line-height: 1.875;
+}
+
+.visual-text-v2 {
+    @include font-size($heading-s-sizes);
+    line-height: 1.5;
+    .visual-title {
+        font-weight: 700;
+        font-family: $font-family-base;
+    }
+}
+
+.visual-text-v3 {
+    @include font-size($heading-s-sizes);
+    line-height: 1.5;
+    .icon {
+        margin-bottom: #{$global-space * 4};
+    }
+    .visual-title {
+        font-weight: 700;
+    }
+}
+
+.visual-subtitle {
+    @include font-size($h1-font-sizes);
+    font-weight: 300;
+    font-family: $headings-font-family;
+}
+
+// visual with solid background color
+.visual-no-bg {
+    .visual-inner {
+        height: auto;
+        min-height: 0.07143rem;
+        @include breakpoint-min ($screen-medium) {
+            height: auto;
+        }
+        @include breakpoint-min ($screen-large) {
+            padding-top: #{$global-space * 9};
+            padding-bottom: #{$global-space * 4.5};
+        }
+        .centered {
+            display: block;
+        }
+    }
+    .visual-title {
+        color: $visual-no-bg-title-color;
+        @include font-size($h2-font-sizes);
+        text-transform: capitalize;
+        letter-spacing: .2rem;
+    }
+}
+
+// visual bottom styles
+.visual-bottom-block {
+    background: rgba(0, 0, 0, 0.5);
+    padding:0 #{$global-space * 0};
+    @include breakpoint-min ($screen-extra-large) {
+        padding:0 #{$global-space * 0};
+    }
+    h4 {
+        @include font-size($normal-font-sizes);
+        color: $visual-title-h4-color;
+        padding-top: 1rem;
+        margin-bottom: 1.563rem;
+    }
+    p {
+        font-size: 0.875rem;
+        letter-spacing: 0;
+        color: $visual-text-color;
+        padding-bottom: 1.5rem;
+        @include breakpoint-min ($screen-extra-large) {
+            font-size: 0.875rem;
+        }
+    }
+    .item-box {
+        position: relative;
+        min-height: 100%;
+        @include media-breakpoint-between (md, xl) {
+            min-height: 6.25rem;
+        }
+    }
+    .owl-item + .owl-item {
+        .item-box {
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: -1.3rem;
+                width: 1px;
+                height: 51.6%;
+                background: #fff;
+                display: none;
+                transform: rotate(160deg);
+                @include media-breakpoint-between (md, xl) {
+                    display: block;
+                }
+            }
+            &:after {
+                top: auto;
+                bottom: 0;
+                transform: rotate(-160deg);
+            }
+        }
+    }
+}

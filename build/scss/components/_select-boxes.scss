@@ -1,0 +1,133 @@
+/******* select boxes styles *******/
+
+// select boxes styles
+.waituk_select-box {
+    label {
+        /*min-width: 400px;*/
+        padding-left: 35px;
+    }
+    input[type="radio"]:empty,
+    input[type="checkbox"]:empty {
+        display: none;
+    }
+    input[type="radio"]:empty ~ label,
+    input[type="checkbox"]:empty ~ label {
+        position: relative;
+        line-height: 20px;
+        margin-top: 2em;
+        cursor: pointer;
+        user-select: none;
+    }
+    input[type="radio"]:empty ~ label:before,
+    input[type="checkbox"]:empty ~ label:before {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: $select-box-before-bg-color;
+        border-radius: 50%;
+        font-family: 'roxine-font-icon';
+        text-align: center;
+        transition: all linear .2s;
+    }
+    input[type="radio"]:checked ~ label:before,
+    input[type="checkbox"]:checked ~ label:before {
+        content: '\e489';
+        color: $select-box-before-checked-color;
+        background: $select-box-before-checked-bg-color;
+        transition: all linear .2s;
+    }
+    input[type="radio"]:checked ~ label,
+    input[type="checkbox"]:checked ~ label {
+        color: $select-box-checked-label-color;
+        transition: all linear .2s;
+    }
+    input[type="radio"]:focus ~ label:before,
+    input[type="checkbox"]:focus ~ label:before {
+        box-shadow: 0 0 0 3px #999;
+    }
+    .waituk_select-box-default input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-default input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: $select-box-before-checked-bg-color;
+    }
+    .waituk_select-box-primary input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-primary input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: $primary-color;
+    }
+    .waituk_select-box-secondary input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-secondary input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: $secondary-color;
+    }
+    .waituk_select-box-danger input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-danger input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: #d9534f;
+    }
+    .waituk_select-box-warning input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-warning input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: #f0ad4e;
+    }
+    .waituk_select-box-info input[type="radio"]:checked ~ label:before,
+    .waituk_select-box-info input[type="checkbox"]:checked ~ label:before {
+        color: $select-box-before-checked-color;
+        background: #5bc0de;
+    }
+    .square-box {
+        input[type="radio"]:empty ~ label:before,
+        input[type="checkbox"]:empty ~ label:before {
+            border-radius: 0;
+        }
+    }
+    .solid-box {
+        input[type="radio"]:empty ~ label:before,
+        input[type="checkbox"]:empty ~ label:before {
+            background: none;
+            content: '\ed2e';
+            font-size: 20px;
+            color: $select-box-before-color;
+        }
+        input[type="radio"]:checked ~ label:before,
+        input[type="checkbox"]:checked ~ label:before {
+            background: none;
+            content: '\ed2d';
+            font-size: 20px;
+        }
+        &.waituk_select-box-primary input[type="radio"]:checked ~ label:before,
+        &.waituk_select-box-primary input[type="checkbox"]:checked ~ label:before {
+            color: $primary-color;
+        }
+        &.waituk_select-box-secondary input[type="radio"]:checked ~ label:before,
+        &.waituk_select-box-secondary input[type="checkbox"]:checked ~ label:before {
+            color: $secondary-color;
+        }
+        &.waituk_select-box-danger input[type="radio"]:checked ~ label:before,
+        &.waituk_select-box-danger input[type="checkbox"]:checked ~ label:before {
+            color: #d9534f;
+        }
+        &.waituk_select-box-warning input[type="radio"]:checked ~ label:before,
+        &.waituk_select-box-warning input[type="checkbox"]:checked ~ label:before {
+            color: #f0ad4e;
+        }
+        &.waituk_select-box-info input[type="radio"]:checked ~ label:before,
+        &.waituk_select-box-info input[type="checkbox"]:checked ~ label:before {
+            color: #5bc0de;
+        }
+    }
+    .checkbox-inline,
+    .radio-inline {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+    .checkbox-inline+.checkbox-inline,
+    .radio-inline+.radio-inline {
+        margin-left: 0;
+    }
+}

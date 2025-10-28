@@ -1,0 +1,250 @@
+/******* blog styles *******/
+
+// blog styles
+.blog-holder {
+    .col-wrap {
+        margin-bottom: 0;
+        @include breakpoint-min ($screen-medium) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.blog-holder {
+    .blog-desc {
+        border: 1px solid $blog-desc-border-color;
+        padding: 0 0.9375rem;
+        .blog-title {
+            position: relative;
+            padding: 0.9375rem 0 0.4rem;
+            border-bottom: 1px solid $blog-desc-border-color;
+            margin: 0 0 1.25rem;
+            transition: all linear .2s;
+        }
+        h6 {
+            font-weight: $semi-font-weight;
+            line-height: 1.6;
+            margin: 0;
+            a {
+                color: $blog-title-color;
+            }
+        }
+        &:hover {
+            .blog-title {
+                h6 {
+                    a {
+                        color: $blog-title-hover-color;
+                    }
+                }
+            }
+        }
+    }
+    .blog-share {
+        border-top: 1px solid $blog-share-border-color;
+        padding: 1.25rem 0.9375rem 0;
+        background: $blog-share-bg-color;
+        margin: 0.9375rem -0.9375rem 0;
+        .social-network {
+            &.with-text {
+                li {
+                    vertical-align: text-top;
+                    font-size: 0.75rem;
+                    position: relative;
+                    @include breakpoint-min($screen-extra-large) {
+                        font-size: 0.875rem;
+                    }
+                    span {
+                        font-size: 1rem;
+                        margin-right: 0;
+                    }
+                    &:before {
+                        position: absolute;
+                        content: '/';
+                        right: -5px;
+                        top: 0;
+                        @include breakpoint-min($screen-extra-large) {
+                            right: 3px;
+                        }
+                    }
+                    &:first-child:before,
+                    &:last-child:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .blog-img {
+        margin: 0 0 1.875rem;
+        img {
+            width: 100%;
+        }
+    }
+    .blog-footer {
+        margin: 0.9375rem -0.9375rem 0;
+        padding: 0.9375rem 0.9375rem 0;
+    }
+}
+
+// blog grid
+.blog-grid {
+    @include breakpoint-min($screen-large) {
+        figure,
+        .blog-img {
+            margin: 0;
+        }
+    }
+}
+
+//reverse effect
+.reverse-grid {
+    .post-date {
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s all linear;
+    }
+    .post-img {
+        img {
+            filter: grayscale(0);
+        }
+    }
+    &:hover {
+        .post-date {
+            opacity: 1;
+            visibility: visible;
+        }
+        .post-img {
+            img {
+                filter: grayscale(100%);
+            }
+        }
+    }
+}
+
+// comment block
+.comment-block {
+    border: 1px solid $comment-block-border-color;
+    background: $comment-block-border-color;
+    padding: 1.25rem 0.9375rem;
+    h5 {
+        font-weight: $semi-font-weight;
+        line-height: 1.6;
+        a {
+            color: $comment-title-color;
+        }
+    }
+    .comment-slot {
+        position: relative;
+        .thumb {
+            max-width: 3.125rem;
+        }
+        .comment-desc {
+            padding: 0.9375rem;
+            position: relative;
+            margin-top: 1.875rem;
+            a {
+            color: $comment-title-color;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .comment-reply {
+        margin: 1.875rem 0 0 0;
+        .comment-desc {
+            border-top: 1px solid $comment-block-border-color;
+        }
+    }
+    .jq-ry-container {
+        padding: 0 0;
+    }
+    @include breakpoint-max($screen-large) {
+        .rating-block.float-right {
+            float: left !important;
+        }
+    }
+    @include breakpoint-min($screen-large) {
+        padding: 1.25rem 0.9375rem;
+        .comment-slot {
+            padding-left: 4.375rem;
+            .thumb {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .comment-desc {
+                margin-top: 0;
+                &:before {
+                    position: absolute;
+                    top: 0.9375rem;
+                    right: 100%;
+                    content: '';
+                }
+            }
+        }
+        .comment-reply {
+            margin: 3.125rem 0 0 3.125rem;
+            .comment-desc {
+                border-left: 1px solid $comment-block-border-color;
+            }
+        }
+    }
+}
+
+.blog-lists {
+    border-top: 1px solid $blog-lists-border-color;
+    border-bottom: 1px solid $blog-lists-border-color;
+    padding: 0.25rem 0.9375rem;
+    margin: 0 -0.9375rem 0;
+    .blog-list-items {
+        @extend %listreset;
+        li {
+            display: block;
+            font-size: 0.75rem;
+            position: relative;
+            margin-right: 10px;
+            a {
+                color: $blog-list-items-link-color;
+                &:hover {
+                    color: $blog-list-items-link-hover-color;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            @include breakpoint-min($screen-small) {
+                display: inline-block;
+                &:before {
+                    position: absolute;
+                    content: '|';
+                    right: -9px;
+                    top: 0;
+                }
+                &:last-child:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// related post
+.related-posts {
+    .post-img {
+        margin-bottom: 0;
+    }
+    .blog-lists {
+        border: none;
+        padding: 0 0;
+        margin: 0;
+    }
+    .post-text {
+        padding: 0.5rem 0 0;
+        a {
+            &:hover {
+                color: $related-posts-link-hover-color;
+            }
+        }
+    }
+}
