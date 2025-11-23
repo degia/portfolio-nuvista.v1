@@ -1,7 +1,10 @@
 // Daftar peran yang ingin ditampilkan
     const roles = [
-      "S",
-      "K"
+      "DATA ANALYST",
+      "DATA ENGINEER",
+      "BACKEND DEVELOPER",
+      "UI/UX DESIGNER",
+      "GRAPHIC DESIGNER",
     ];
 
     const rotator = document.getElementById('rotator');
